@@ -1,281 +1,150 @@
-/* =========================================================
-   AWIN SOFTTECH SOLUTIONS
-   TRUST BAR
-   ========================================================= */
-
-/* =========================================================
-   SECTION
-   ========================================================= */
-
 .trust-bar-container {
     width: 100%;
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
     background: #1f1f1f;
-
     border-top: 1px solid rgba(77, 70, 53, 0.2);
     border-bottom: 1px solid rgba(77, 70, 53, 0.2);
 }
-
-/* =========================================================
-   WRAPPER
-   ========================================================= */
-
 .trust-bar-wrapper {
     width: 100%;
     max-width: 1280px;
-
     margin: 0 auto;
     padding: 0 64px;
-
     box-sizing: border-box;
 }
-
-/* =========================================================
-   BLOCK
-   ========================================================= */
-
 .trust-bar {
     width: 100%;
-
     margin: 0;
     padding: 32px 0;
-
     box-sizing: border-box;
-
-    background: transparent;
-
+    background: 0 0;
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
-
-/* =========================================================
-   INNER ELEMENTS
-   ========================================================= */
-
 .trust-bar > div,
 .trust-bar > div > div {
     width: 100%;
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
-
-/* =========================================================
-   LIST
-   Equal distribution for any number of items
-   ========================================================= */
-
 .trust-bar ul {
     width: 100%;
-
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
-
     box-sizing: border-box;
 }
-
-/* =========================================================
-   LIST ITEMS
-   ========================================================= */
-
 .trust-bar li {
     position: relative;
-
     flex: 1 1 0;
-
     min-width: 0;
-
     margin: 0;
     padding: 0 20px;
-
     box-sizing: border-box;
-
     color: #d0c5af;
-
     font-family: Inter, Arial, Helvetica, sans-serif;
-
     font-size: 12px;
-
     font-weight: 600;
-
     line-height: 1;
-
     letter-spacing: 0.05em;
-
     text-align: center;
-
     white-space: nowrap;
-
     transition: color 0.3s ease;
 }
-
-/* =========================================================
-   SEPARATORS
-   ========================================================= */
-
 .trust-bar li:not(:last-child)::after {
     content: "|";
-
     position: absolute;
-
     right: 0;
     top: 50%;
-
     transform: translateY(-50%);
-
     color: #99907c;
-
     font-size: 20px;
-
     font-weight: 400;
-
     line-height: 1;
 }
-
-/* =========================================================
-   HOVER
-   ========================================================= */
-
 .trust-bar li:hover {
     color: #d8b76a;
 }
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
 @media (max-width: 1000px) {
     .trust-bar-wrapper {
         padding-left: 40px;
         padding-right: 40px;
     }
-
     .trust-bar {
         padding-top: 28px;
         padding-bottom: 28px;
     }
-
     .trust-bar li {
         padding-left: 12px;
         padding-right: 12px;
-
         font-size: 11px;
     }
-
     .trust-bar li:not(:last-child)::after {
         font-size: 18px;
     }
 }
-
-/* =========================================================
-   SMALL TABLET
-   ========================================================= */
-
 @media (max-width: 800px) {
     .trust-bar-wrapper {
         padding-left: 30px;
         padding-right: 30px;
     }
-
     .trust-bar li {
         padding-left: 8px;
         padding-right: 8px;
-
         font-size: 10px;
-
         letter-spacing: 0.04em;
     }
 }
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 700px) {
     .trust-bar-wrapper {
         max-width: none;
-
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .trust-bar {
         padding-top: 24px;
         padding-bottom: 24px;
     }
-
     .trust-bar ul {
         flex-wrap: wrap;
-
         justify-content: center;
-
         row-gap: 20px;
     }
-
     .trust-bar li {
         flex: 1 1 50%;
-
         min-width: 50%;
-
         padding: 5px 10px;
-
         font-size: 10px;
-
         line-height: 1.4;
-
         white-space: normal;
     }
-
-    /* Hide separators on mobile */
-
     .trust-bar li::after {
         display: none !important;
     }
 }
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
 @media (max-width: 450px) {
     .trust-bar-wrapper {
         padding-left: 15px;
         padding-right: 15px;
     }
-
     .trust-bar {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-
     .trust-bar ul {
         flex-direction: column;
-
         gap: 12px;
     }
-
     .trust-bar li {
         flex: none;
-
         min-width: 0;
-
         width: 100%;
-
         padding: 4px 5px;
-
         font-size: 10px;
     }
 }

@@ -1,136 +1,70 @@
-/* =========================================================
-   ADOBE EDS BASE STYLES
-   AWIN SOFTTECH SOLUTIONS
-   ========================================================= */
-
 :root {
-    /* =========================
-     COLORS
-     ========================= */
-
     --background-color: #050505;
     --surface-color: #111111;
     --surface-container: #1c1c1c;
     --light-color: #eeeeee;
     --dark-color: #111111;
-
     --text-color: #eeeeee;
     --muted-text-color: #bdb6aa;
-
     --primary-color: #f2ca50;
     --secondary-color: #ff8b00;
-
     --link-color: #f2ca50;
     --link-hover-color: #ff8b00;
-
-    /* =========================
-     FONTS
-     ========================= */
-
     --body-font-family: "Manrope", Arial, sans-serif;
     --heading-font-family: "Manrope", Arial, sans-serif;
-
-    /* =========================
-     BODY SIZES
-     ========================= */
-
     --body-font-size-m: 16px;
     --body-font-size-s: 14px;
     --body-font-size-xs: 12px;
-
-    /* =========================
-     HEADING SIZES
-     ========================= */
-
     --heading-font-size-xxl: 52px;
     --heading-font-size-xl: 42px;
     --heading-font-size-l: 32px;
     --heading-font-size-m: 24px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
-
-    /* =========================
-     NAV
-     ========================= */
-
     --nav-height: 80px;
 }
-
-/* =========================================================
-   FALLBACK FONT
-   ========================================================= */
-
 @font-face {
     font-family: manrope-fallback;
     size-adjust: 100%;
     src: local("Arial");
 }
-
-/* =========================================================
-   GLOBAL RESET
-   ========================================================= */
-
 *,
-*::before,
-*::after {
+::after,
+::before {
     box-sizing: border-box;
 }
-
 html {
     margin: 0;
     padding: 0;
     background: var(--background-color);
     scroll-behavior: smooth;
 }
-
 body {
     display: none;
-
     margin: 0;
     padding: 0;
-
     min-height: 100vh;
-
     background-color: var(--background-color);
     color: var(--text-color);
-
     font-family: var(--body-font-family);
     font-size: var(--body-font-size-m);
     line-height: 1.6;
-
     overflow-x: hidden;
 }
-
 body.appear {
     display: block;
 }
-
-/* =========================================================
-   EDS HEADER VISIBILITY
-   ========================================================= */
-
-header .header,
-footer .footer {
+footer .footer,
+header .header {
     visibility: hidden;
 }
-
-header .header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
+footer .footer[data-block-status="loaded"],
+header .header[data-block-status="loaded"] {
     visibility: visible;
 }
-
-/* =========================================================
-   HEADER HEIGHT
-   ========================================================= */
-
 header {
     height: var(--nav-height);
 }
-
-/* =========================================================
-   HEADINGS
-   ========================================================= */
-
 h1,
 h2,
 h3,
@@ -139,292 +73,179 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: 0.5em;
-
     font-family: var(--heading-font-family);
     font-weight: 600;
     line-height: 1.2;
-
     color: var(--text-color);
-
     scroll-margin: 40px;
 }
-
 h1 {
     font-size: var(--heading-font-size-xxl);
 }
-
 h2 {
     font-size: var(--heading-font-size-xl);
 }
-
 h3 {
     font-size: var(--heading-font-size-l);
 }
-
 h4 {
     font-size: var(--heading-font-size-m);
 }
-
 h5 {
     font-size: var(--heading-font-size-s);
 }
-
 h6 {
     font-size: var(--heading-font-size-xs);
 }
-
-/* =========================================================
-   TEXT
-   ========================================================= */
-
-p,
+blockquote,
 dl,
 ol,
-ul,
+p,
 pre,
-blockquote {
+ul {
     margin-top: 0;
     margin-bottom: 1em;
 }
-
 p {
     color: var(--muted-text-color);
 }
-
-/* =========================================================
-   LISTS
-   ========================================================= */
-
-ul,
-ol {
+ol,
+ul {
     padding-left: 1.5rem;
 }
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
 a:any-link {
     color: var(--link-color);
     text-decoration: none;
     overflow-wrap: break-word;
 }
-
 a:hover {
     color: var(--link-hover-color);
 }
-
-/* =========================================================
-   IMAGES
-   ========================================================= */
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 main img {
     max-width: 100%;
     width: auto;
     height: auto;
 }
-
-/* =========================================================
-   ICON
-   ========================================================= */
-
 .icon {
     display: inline-block;
     width: 24px;
     height: 24px;
 }
-
 .icon img {
     width: 100%;
     height: 100%;
 }
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
+button,
 input,
-textarea,
 select,
-button {
+textarea {
     font: inherit;
 }
-
 p.button-wrapper {
     margin: 12px 0;
 }
-
 a.button:any-link,
 button.button {
     box-sizing: border-box;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     max-width: 100%;
-
     margin: 0;
-
     border: 2px solid transparent;
     border-radius: 6px;
-
     padding: 0.75em 1.5em;
-
     font: inherit;
     font-weight: 600;
     line-height: 1.25;
-
     text-decoration: none;
-
     cursor: pointer;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-/* =========================================================
-   PRIMARY BUTTON
-   ========================================================= */
-
 a.button.primary,
 button.button.primary {
     border-color: var(--primary-color);
     background-color: var(--primary-color);
     color: var(--dark-color);
 }
-
-a.button.primary:hover,
 a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
+a.button.primary:hover,
+button.button.primary:focus-visible,
+button.button.primary:hover {
     border-color: var(--secondary-color);
     background-color: var(--secondary-color);
     color: var(--dark-color);
 }
-
-/* =========================================================
-   SECONDARY BUTTON
-   ========================================================= */
-
 a.button.secondary,
 button.button.secondary {
     border-color: var(--primary-color);
     background-color: transparent;
     color: var(--primary-color);
 }
-
-a.button.secondary:hover,
 a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
+a.button.secondary:hover,
+button.button.secondary:focus-visible,
+button.button.secondary:hover {
     border-color: var(--primary-color);
     background-color: rgba(242, 202, 80, 0.1);
     color: var(--primary-color);
 }
-
-/* =========================================================
-   ACCENT BUTTON
-   ========================================================= */
-
 a.button.accent,
 button.button.accent {
     border-color: var(--secondary-color);
     background-color: var(--secondary-color);
-    color: #111111;
+    color: #111;
 }
-
-a.button.accent:hover,
 a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
+a.button.accent:hover,
+button.button.accent:focus-visible,
+button.button.accent:hover {
     border-color: var(--primary-color);
     background-color: var(--primary-color);
 }
-
-/* =========================================================
-   DISABLED BUTTONS
-   ========================================================= */
-
 a.button[aria-disabled="true"],
 button.button:disabled {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.5;
 }
-
-/* =========================================================
-   MAIN
-   ========================================================= */
-
 main {
     width: 100%;
     min-height: 100vh;
-
     margin: 0;
     padding: 0;
-
     background: var(--background-color);
 }
-
-/* =========================================================
-   IMPORTANT EDS SECTION RESET
-   ========================================================= */
-
-/*
-   Default EDS adds margins to sections.
-   Remove them because our individual blocks
-   control their own spacing.
-*/
-
 main > div {
     margin: 0;
     padding: 0;
 }
-
 main > .section {
     width: 100%;
-
     margin: 0;
     padding: 0;
 }
-
 main > .section > div {
     max-width: none;
     margin: 0;
     padding: 0;
 }
-
-/* =========================================================
-   FIRST SECTION
-   ========================================================= */
-
 main > .section:first-of-type {
     margin-top: 0;
 }
-
-/* =========================================================
-   GLOW OVERLAY
-   ========================================================= */
-
 .glow-overlay {
     position: fixed;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     pointer-events: none;
-
     z-index: 0;
-
     background:
         radial-gradient(
             circle at 15% 20%,
@@ -437,61 +258,35 @@ main > .section:first-of-type {
             transparent 35%
         );
 }
-
-/* =========================================================
-   CONTENT ABOVE GLOW
-   ========================================================= */
-
-main,
+footer,
 header,
-footer {
+main {
     position: relative;
     z-index: 1;
 }
-
-/* =========================================================
-   LIGHT / HIGHLIGHT SECTIONS
-   ========================================================= */
-
-main .section.light,
-main .section.highlight {
+main .section.highlight,
+main .section.light {
     margin: 0;
     padding: 0;
     background-color: var(--surface-color);
 }
-
-/* =========================================================
-   CODE
-   ========================================================= */
-
 code,
 pre {
     font-size: var(--body-font-size-s);
 }
-
 pre {
     padding: 16px;
-
     border-radius: 8px;
-
     background-color: var(--surface-container);
-
     color: var(--text-color);
-
     overflow-x: auto;
     white-space: pre;
 }
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-
 @media (width >= 900px) {
     :root {
         --body-font-size-m: 16px;
         --body-font-size-s: 14px;
         --body-font-size-xs: 12px;
-
         --heading-font-size-xxl: 52px;
         --heading-font-size-xl: 42px;
         --heading-font-size-l: 32px;
@@ -500,50 +295,33 @@ pre {
         --heading-font-size-xs: 18px;
     }
 }
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
 @media (max-width: 899px) {
     h1 {
         font-size: 42px;
     }
-
     h2 {
         font-size: 36px;
     }
-
     h3 {
         font-size: 28px;
     }
 }
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 600px) {
     :root {
         --nav-height: 72px;
     }
-
     body {
         font-size: 15px;
     }
-
     h1 {
         font-size: 36px;
     }
-
     h2 {
         font-size: 30px;
     }
-
     h3 {
         font-size: 25px;
     }
-
     main > .section > div {
         padding: 0;
     }
