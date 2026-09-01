@@ -1,272 +1,423 @@
-/* header and nav layout */
-header .nav-wrapper {
-  background-color: var(--background-color);
-  width: 100%;
-  z-index: 2;
-  position: fixed;
-}
+/* ==========================================
+   AWIN HEADER - 35 / 50 / 15 LAYOUT
+========================================== */
 
 header nav {
-  box-sizing: border-box;
-  display: grid;
-  grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
-  align-items: center;
-  gap: 0 24px;
-  margin: auto;
-  max-width: 1248px;
-  height: var(--nav-height);
-  padding: 0 24px;
-  font-family: var(--body-font-family);
-}
+  width: 100%;
+  max-width: none;
 
-header nav[aria-expanded='true'] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
-  overflow-y: auto;
-  min-height: 100dvh;
-}
+  height: 104px;
+  min-height: 104px;
 
-@media (width >= 900px) {
-  header .nav-wrapper {
-    position: relative;
-  }
-
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
-
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
-  }
-}
-
-header nav p {
   margin: 0;
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns: 35% 50% 15%;
+
+  align-items: center;
+
+  background: #050608;
+  color: #d0d0d0;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================
+   LEFT - LOGO - 35%
+========================================== */
+
+header .logo-container {
+  width: 100%;
+  height: 104px;
+
+  max-width: none;
+
+  padding: 0 0 0 45px;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+}
+
+header .logo-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .logo.block {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .logo.block picture {
+  display: block;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  line-height: 0;
+}
+
+header .logo.block img {
+  display: block;
+
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0;
+}
+
+
+/* ==========================================
+   MIDDLE - NAVIGATION - 50%
+========================================== */
+
+header .nav-sections {
+  width: 100%;
+  height: 104px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: visible;
+}
+
+header .navigation-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .navigation.block {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .navigation.block > div,
+header .navigation.block > div > div {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .navigation ul {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 34px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+header .navigation ul > li {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+header .navigation ul > li > a {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 104px;
+
+  padding: 0;
+  margin: 0;
+
+  color: #c9c9c9;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+header .navigation ul > li > a:hover {
+  color: #d8b76a;
+}
+
+
+/* ==========================================
+   ACTIVE PAGE
+========================================== */
+
+header .navigation ul > li > a[aria-current="page"] {
+  color: #d8b76a;
+}
+
+header .navigation ul > li > a[aria-current="page"]::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 28px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #d8b76a;
+}
+
+
+/* ==========================================
+   RIGHT - GET IN TOUCH - 15%
+========================================== */
+
+header .get-in-touch-container {
+  width: 100%;
+  height: 104px;
+
+  margin: 0;
+  padding: 0 30px 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  box-sizing: border-box;
+}
+
+header .get-in-touch-wrapper,
+header .get-in-touch.block,
+header .get-in-touch.block > div,
+header .get-in-touch.block > div > div {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .get-in-touch.block p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header .icon-get-in-touch {
+  box-sizing: border-box;
+
+  width: 150px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px 0 20px;
+
+  border: 1px solid #a47d2e;
+  border-radius: 6px;
+
+  color: #d8b76a;
+
+  cursor: pointer;
+}
+
+
+/* Hide broken SVG/image */
+
+header .icon-get-in-touch img {
+  display: none;
+}
+
+
+/* Button text */
+
+header .icon-get-in-touch::before {
+  content: "Get In Touch";
+
+  color: #d8b76a;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* Arrow */
+
+header .icon-get-in-touch::after {
+  content: "→";
+
+  color: #d8b76a;
+
+  font-size: 20px;
+  font-weight: 300;
+
   line-height: 1;
 }
 
-header nav a:any-link {
-  color: currentcolor;
+
+/* ==========================================
+   HAMBURGER - DESKTOP HIDDEN
+========================================== */
+
+header .nav-hamburger {
+  display: none;
 }
 
-/* hamburger */
-header nav .nav-hamburger {
-  grid-area: hamburger;
-  height: 22px;
-  display: flex;
-  align-items: center;
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (width >= 900px) and (width < 1200px) {
+
+  header .logo-container {
+    padding-left: 25px;
+  }
+
+  header .logo.block img {
+    width: 270px;
+  }
+
+  header .navigation ul {
+    gap: 20px;
+  }
+
+  header .navigation ul > li > a {
+    font-size: 13px;
+  }
+
+  header .get-in-touch-container {
+    padding-right: 20px;
+  }
+
+  header .icon-get-in-touch {
+    width: 130px;
+  }
 }
 
-header nav .nav-hamburger button {
-  height: 22px;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
-  overflow: initial;
-  text-overflow: initial;
-  white-space: initial;
-}
 
-header nav .nav-hamburger-icon,
-header nav .nav-hamburger-icon::before,
-header nav .nav-hamburger-icon::after {
-  box-sizing: border-box;
-  display: block;
-  position: relative;
-  width: 20px;
-}
+/* ==========================================
+   MOBILE
+========================================== */
 
-header nav .nav-hamburger-icon::before,
-header nav .nav-hamburger-icon::after {
-  content: '';
-  position: absolute;
-  background: currentcolor;
-}
+@media (width < 900px) {
 
-header nav[aria-expanded='false'] .nav-hamburger-icon,
-header nav[aria-expanded='false'] .nav-hamburger-icon::before,
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  height: 2px;
-  border-radius: 2px;
-  background: currentcolor;
-}
+  header nav {
+    width: 100%;
+    height: 78px;
+    min-height: 78px;
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::before {
-  top: -6px;
-}
+    padding: 0 20px;
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  top: 6px;
-}
+    display: grid;
 
-header nav[aria-expanded='true'] .nav-hamburger-icon {
-  height: 22px;
-}
+    grid-template-columns: 28px 1fr;
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  top: 3px;
-  left: 1px;
-  transform: rotate(45deg);
-  transform-origin: 2px 1px;
-  width: 24px;
-  height: 2px;
-  border-radius: 2px;
-}
+    gap: 15px;
+  }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  top: unset;
-  bottom: 3px;
-  transform: rotate(-45deg);
-}
+  header .nav-hamburger {
+    display: flex;
+    visibility: visible;
 
-@media (width >= 900px) {
-  header nav .nav-hamburger {
+    width: 28px;
+    height: 24px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .logo-container {
+    width: 230px;
+    max-width: 230px;
+
+    height: 78px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+  }
+
+  header .logo.block img {
+    width: 230px;
+    max-width: 100%;
+  }
+
+  header .nav-sections {
     display: none;
     visibility: hidden;
   }
-}
 
-/* brand */
-header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
-}
+  header .get-in-touch-container {
+    display: none;
+  }
 
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
+  /* Open mobile menu */
 
-/* sections */
-header nav .nav-sections {
-  grid-area: sections;
-  flex: 1 1 auto;
-  display: none;
-  visibility: hidden;
-}
+  header nav[aria-expanded="true"] {
+    height: auto;
+    min-height: 100dvh;
 
-header nav[aria-expanded='true'] .nav-sections {
-  display: block;
-  visibility: visible;
-  align-self: start;
-}
+    grid-template-columns: 28px 1fr;
+    grid-template-rows: 78px auto;
 
-header nav .nav-sections ul {
-  list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
-}
+    align-items: start;
 
-header nav .nav-sections ul > li {
-  font-weight: 500;
-}
+    overflow-y: auto;
+  }
 
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
-}
+  header nav[aria-expanded="true"] .nav-sections {
+    grid-column: 1 / -1;
+    grid-row: 2;
 
-header nav .nav-sections ul > li > ul > li {
-  font-weight: 400;
-}
+    width: 100%;
 
-@media (width >= 900px) {
-  header nav .nav-sections {
     display: block;
     visibility: visible;
-    white-space: nowrap;
   }
 
-  header nav[aria-expanded='true'] .nav-sections {
-    align-self: unset;
-  }
-
-  header nav .nav-sections .nav-drop {
-    position: relative;
-    padding-right: 16px;
-    cursor: pointer;
-  }
-
-  header nav .nav-sections .nav-drop::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0.5em;
-    right: 2px;
-    transform: rotate(135deg);
-    width: 6px;
-    height: 6px;
-    border: 2px solid currentcolor;
-    border-radius: 0 1px 0 0;
-    border-width: 2px 2px 0 0;
-  }
-
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
-    top: unset;
-    bottom: 0.5em;
-    transform: rotate(315deg);
-  }
-
-  header nav .nav-sections ul {
-    display: flex;
-    gap: 24px;
-    margin: 0;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li {
-    flex: 0 1 auto;
-    position: relative;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
-    display: none;
-    position: relative;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+  header nav[aria-expanded="true"] .navigation ul {
     display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
-    white-space: initial;
+
+    width: 100%;
+
+    margin: 20px 0 0;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 16px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
-  }
+  header nav[aria-expanded="true"] .navigation ul > li > a {
+    width: 100%;
+    height: auto;
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
-  }
-}
+    padding: 15px 0;
 
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
+    font-size: 15px;
+  }
 }

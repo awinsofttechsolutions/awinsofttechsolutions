@@ -1,20 +1,386 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
-}
+/* =========================================================
+   AWIN SOFTTECH SOLUTIONS - FOOTER
+   ========================================================= */
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer p {
+.footer-wrapper {
+  width: 100%;
+  background: #050607;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+.footer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #050607;
+}
+
+.footer .section {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.footer > div {
+  display: grid;
+
+  /* 40% LEFT | 60% RIGHT */
+  grid-template-columns: 40% 60%;
+
+  /* 50px outer spacing */
+  padding: 45px 50px 0;
+
+  box-sizing: border-box;
+
+  column-gap: 35px;
+}
+
+
+/* =========================================================
+   LOGO CONTAINER
+   Make its children participate in parent grid
+   ========================================================= */
+
+.footer-logo-container {
+  display: contents;
+}
+
+
+/* =========================================================
+   LEFT SIDE - LOGO
+   ========================================================= */
+
+.footer-logo-wrapper {
+  grid-column: 1;
+  grid-row: 1 / 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px 25px;
+  box-sizing: border-box;
+}
+
+.footer-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  display: block;
+
+  width: 210px;
+  height: 210px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   RIGHT SIDE - DESCRIPTION
+   ========================================================= */
+
+.footer-logo-text-wrapper {
+  grid-column: 2;
+  grid-row: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding: 5px 20px 15px 0;
+  box-sizing: border-box;
+}
+
+.footer-logo-text {
+  width: 100%;
+}
+
+.footer-logo-text p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: #d2d2d2;
+
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RIGHT SIDE - SOCIAL LINKS
+   ========================================================= */
+
+.social-links-container {
+  grid-column: 2;
+  grid-row: 2;
+
+  padding: 12px 20px 12px 0;
+  box-sizing: border-box;
+}
+
+.social-links ul {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 45px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.social-links a {
+  display: inline-block;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d8b76a;
+}
+
+
+/* =========================================================
+   RIGHT SIDE - LEGAL LINKS
+   ========================================================= */
+
+.legal-links-container {
+  grid-column: 2;
+  grid-row: 3;
+
+  padding: 8px 20px 30px 0;
+  box-sizing: border-box;
+}
+
+.legal-links ul {
+  display: flex;
+
+  align-items: center;
+
+  gap: 45px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.legal-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.legal-links a {
+  display: inline-block;
+
+  color: #999999;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #d8b76a;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.footer-note-container {
+  grid-column: 1 / -1;
+  grid-row: 4;
+
+  margin: 0;
+
+  padding: 0;
+
+  border-top: 1px solid #292929;
+}
+
+.footer-note p {
+  margin: 0;
+
+  padding: 18px 0 24px;
+
+  text-align: center;
+
+  color: #777777;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUBTLE GOLD HOVER
+   ========================================================= */
+
+.social-links a:hover,
+.legal-links a:hover {
+  color: #d8b76a;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .footer > div {
+    grid-template-columns: 38% 62%;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    column-gap: 25px;
+  }
+
+  .footer-logo img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .footer-logo-text p {
+    font-size: 14px;
+  }
+
+  .social-links ul,
+  .legal-links ul {
+    gap: 30px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .footer > div {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 25px 0;
+
+    gap: 0;
+  }
+
+  /* Logo */
+  .footer-logo-wrapper {
+    order: 1;
+
+    padding: 0 0 25px;
+  }
+
+  .footer-logo img {
+    width: 170px;
+    height: 170px;
+  }
+
+  /* Description */
+  .footer-logo-text-wrapper {
+    order: 2;
+
+    padding: 0 0 25px;
+
+    text-align: center;
+
+    justify-content: center;
+  }
+
+  .footer-logo-text p {
+    max-width: 600px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Social */
+  .social-links-container {
+    order: 3;
+
+    padding: 5px 0 20px;
+  }
+
+  .social-links ul {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px 30px;
+  }
+
+  /* Legal */
+  .legal-links-container {
+    order: 4;
+
+    padding: 5px 0 25px;
+  }
+
+  .legal-links ul {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px 25px;
+  }
+
+  /* Copyright */
+  .footer-note-container {
+    order: 5;
+
+    margin: 0;
+  }
+
+  .footer-note p {
+    padding: 16px 0 20px;
+
+    font-size: 11px;
   }
 }
