@@ -1,386 +1,439 @@
 /* =========================================================
-   AWIN SOFTTECH SOLUTIONS - FOOTER
+   AWIN SOFTTECH SOLUTIONS
+   FOOTER
+   ========================================================= */
+
+/* =========================================================
+   FOOTER MAIN
    ========================================================= */
 
 .footer-wrapper {
-  width: 100%;
-  background: #050607;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
 }
 
 .footer {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  background: #050607;
-}
+    width: 100%;
 
-.footer .section {
-  margin: 0;
-  padding: 0;
-}
+    margin: 0;
+    padding: 80px 0 0;
 
+    box-sizing: border-box;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    border-top: 1px solid rgba(180, 170, 145, 0.1);
+}
 
 /* =========================================================
-   MAIN FOOTER
+   FOOTER CONTENT CONTAINER
    ========================================================= */
 
 .footer > div {
-  display: grid;
+    width: 100%;
 
-  /* 40% LEFT | 60% RIGHT */
-  grid-template-columns: 40% 60%;
+    max-width: 1280px;
 
-  /* 50px outer spacing */
-  padding: 45px 50px 0;
+    margin: 0 auto;
 
-  box-sizing: border-box;
+    padding: 0 64px;
 
-  column-gap: 35px;
+    box-sizing: border-box;
 }
 
+/* =========================================================
+   TOP FOOTER AREA
+   ========================================================= */
+
+.footer > div > .footer-logo-container,
+.footer > div > .social-links-container,
+.footer > div > .legal-links-container {
+    box-sizing: border-box;
+}
 
 /* =========================================================
-   LOGO CONTAINER
-   Make its children participate in parent grid
+   LOGO + DESCRIPTION
    ========================================================= */
 
 .footer-logo-container {
-  display: contents;
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
 }
 
-
-/* =========================================================
-   LEFT SIDE - LOGO
-   ========================================================= */
+/* Logo wrapper */
 
 .footer-logo-wrapper {
-  grid-column: 1;
-  grid-row: 1 / 4;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 20px 25px;
-  box-sizing: border-box;
+    margin: 0 0 16px;
+    padding: 0;
 }
 
-.footer-logo {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-logo picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* Logo */
 
 .footer-logo img {
-  display: block;
+    display: block;
 
-  width: 210px;
-  height: 210px;
+    width: 110px;
+    height: auto;
 
-  object-fit: contain;
+    max-height: 55px;
+
+    object-fit: contain;
+
+    object-position: left center;
 }
 
-
-/* =========================================================
-   RIGHT SIDE - DESCRIPTION
-   ========================================================= */
+/* Logo text */
 
 .footer-logo-text-wrapper {
-  grid-column: 2;
-  grid-row: 1;
+    max-width: 380px;
 
-  display: flex;
-  align-items: center;
-
-  padding: 5px 20px 15px 0;
-  box-sizing: border-box;
-}
-
-.footer-logo-text {
-  width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-logo-text p {
-  margin: 0;
+    margin: 0;
+    padding: 0;
 
-  max-width: 650px;
+    color: #d0c5af;
 
-  color: #d2d2d2;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 
-  font-size: 15px;
-  line-height: 1.8;
-  font-weight: 400;
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
 }
 
+/* =========================================================
+   FOOTER TOP LAYOUT
+   ========================================================= */
+
+.footer > div {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr;
+
+    column-gap: 80px;
+
+    row-gap: 48px;
+
+    align-items: start;
+}
 
 /* =========================================================
-   RIGHT SIDE - SOCIAL LINKS
+   SOCIAL LINKS
    ========================================================= */
 
 .social-links-container {
-  grid-column: 2;
-  grid-row: 2;
-
-  padding: 12px 20px 12px 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+.social-links-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+
+.social-links p {
+    margin: 0 0 16px;
+    padding: 0;
+
+    color: #eeeeee;
+
+    font-family: Inter, Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+/* Social list */
 
 .social-links ul {
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    flex-direction: column;
 
-  justify-content: flex-start;
+    gap: 10px;
 
-  gap: 45px;
+    margin: 0;
+    padding: 0;
 
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+    list-style: none;
 }
 
+/* Social link */
+
 .social-links li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .social-links a {
-  display: inline-block;
+    color: #d0c5af;
 
-  color: #ffffff;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 
-  text-decoration: none;
+    font-size: 14px;
 
-  font-size: 14px;
-  font-weight: 400;
+    font-weight: 400;
 
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #d8b76a;
+    color: #ffb000;
 }
 
-
 /* =========================================================
-   RIGHT SIDE - LEGAL LINKS
+   LEGAL LINKS
    ========================================================= */
 
 .legal-links-container {
-  grid-column: 2;
-  grid-row: 3;
-
-  padding: 8px 20px 30px 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+.legal-links-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.legal-links {
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+
+.legal-links p {
+    margin: 0 0 16px;
+    padding: 0;
+
+    color: #eeeeee;
+
+    font-family: Inter, Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+/* Legal list */
 
 .legal-links ul {
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    flex-direction: column;
 
-  gap: 45px;
+    gap: 10px;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  list-style: none;
+    list-style: none;
 }
 
+/* Legal link */
+
 .legal-links li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .legal-links a {
-  display: inline-block;
+    color: #d0c5af;
 
-  color: #999999;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 
-  text-decoration: none;
+    font-size: 14px;
 
-  font-size: 13px;
-  font-weight: 400;
+    font-weight: 400;
 
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
 
 .legal-links a:hover {
-  color: #d8b76a;
+    color: #ffb000;
 }
 
-
 /* =========================================================
-   COPYRIGHT
+   FOOTER NOTE
    ========================================================= */
 
 .footer-note-container {
-  grid-column: 1 / -1;
-  grid-row: 4;
+    grid-column: 1 / -1;
 
-  margin: 0;
+    margin: 32px 0 0;
 
-  padding: 0;
+    padding: 32px 0 28px;
 
-  border-top: 1px solid #292929;
+    border-top: 1px solid rgba(180, 170, 145, 0.1);
+
+    box-sizing: border-box;
+}
+
+.footer-note-wrapper {
+    margin: 0;
+    padding: 0;
 }
 
 .footer-note p {
-  margin: 0;
+    margin: 0;
+    padding: 0;
 
-  padding: 18px 0 24px;
+    color: #a9a092;
 
-  text-align: center;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 
-  color: #777777;
+    font-size: 13px;
 
-  font-size: 12px;
-  line-height: 1.5;
+    font-weight: 400;
+
+    line-height: 1.5;
 }
-
-
-/* =========================================================
-   SUBTLE GOLD HOVER
-   ========================================================= */
-
-.social-links a:hover,
-.legal-links a:hover {
-  color: #d8b76a;
-}
-
 
 /* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
+    .footer {
+        padding-top: 64px;
+    }
 
-  .footer > div {
-    grid-template-columns: 38% 62%;
+    .footer > div {
+        padding: 0 40px;
 
-    padding-left: 40px;
-    padding-right: 40px;
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
 
-    column-gap: 25px;
-  }
-
-  .footer-logo img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .footer-logo-text p {
-    font-size: 14px;
-  }
-
-  .social-links ul,
-  .legal-links ul {
-    gap: 30px;
-  }
+        column-gap: 40px;
+    }
 }
-
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
+    .footer {
+        padding-top: 60px;
+    }
 
-  .footer > div {
-    display: flex;
-    flex-direction: column;
+    .footer > div {
+        display: flex;
 
-    padding: 40px 25px 0;
+        flex-direction: column;
 
-    gap: 0;
-  }
+        gap: 40px;
 
-  /* Logo */
-  .footer-logo-wrapper {
-    order: 1;
+        padding: 0 20px;
+    }
 
-    padding: 0 0 25px;
-  }
+    /* Logo */
 
-  .footer-logo img {
-    width: 170px;
-    height: 170px;
-  }
+    .footer-logo-container {
+        width: 100%;
+    }
 
-  /* Description */
-  .footer-logo-text-wrapper {
-    order: 2;
+    .footer-logo img {
+        width: 100px;
+    }
 
-    padding: 0 0 25px;
+    .footer-logo-text-wrapper {
+        max-width: 400px;
+    }
 
-    text-align: center;
+    /* Social */
 
-    justify-content: center;
-  }
+    .social-links-container,
+    .legal-links-container {
+        width: 100%;
+    }
 
-  .footer-logo-text p {
-    max-width: 600px;
+    /* Footer note */
 
-    font-size: 14px;
-    line-height: 1.7;
-  }
+    .footer-note-container {
+        width: 100%;
 
-  /* Social */
-  .social-links-container {
-    order: 3;
+        margin-top: 8px;
 
-    padding: 5px 0 20px;
-  }
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
 
-  .social-links ul {
-    justify-content: center;
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
-    flex-wrap: wrap;
+@media (max-width: 450px) {
+    .footer > div {
+        padding: 0 16px;
 
-    gap: 15px 30px;
-  }
+        gap: 36px;
+    }
 
-  /* Legal */
-  .legal-links-container {
-    order: 4;
+    .footer-logo-text p {
+        font-size: 14px;
+    }
 
-    padding: 5px 0 25px;
-  }
+    .social-links a,
+    .legal-links a {
+        font-size: 14px;
+    }
 
-  .legal-links ul {
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 12px 25px;
-  }
-
-  /* Copyright */
-  .footer-note-container {
-    order: 5;
-
-    margin: 0;
-  }
-
-  .footer-note p {
-    padding: 16px 0 20px;
-
-    font-size: 11px;
-  }
+    .footer-note p {
+        font-size: 12px;
+    }
 }

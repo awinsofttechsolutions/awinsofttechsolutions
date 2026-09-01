@@ -1,423 +1,364 @@
-/* ==========================================
-   AWIN HEADER - 35 / 50 / 15 LAYOUT
-========================================== */
-
-header nav {
-  width: 100%;
-  max-width: none;
-
-  height: 104px;
-  min-height: 104px;
-
-  margin: 0;
-  padding: 0;
-
-  display: grid;
-
-  grid-template-columns: 35% 50% 15%;
-
-  align-items: center;
-
-  background: #050608;
-  color: #d0d0d0;
-
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* ==========================================
-   LEFT - LOGO - 35%
-========================================== */
-
-header .logo-container {
-  width: 100%;
-  height: 104px;
-
-  max-width: none;
-
-  padding: 0 0 0 45px;
-  margin: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  box-sizing: border-box;
-}
-
-header .logo-wrapper {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .logo.block {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .logo.block picture {
-  display: block;
-
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  line-height: 0;
-}
-
-header .logo.block img {
-  display: block;
-
-  width: 320px;
-  max-width: 100%;
-  height: auto;
-
-  margin: 0;
-}
-
-
-/* ==========================================
-   MIDDLE - NAVIGATION - 50%
-========================================== */
-
-header .nav-sections {
-  width: 100%;
-  height: 104px;
-
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  visibility: visible;
-}
-
-header .navigation-wrapper {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .navigation.block {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .navigation.block > div,
-header .navigation.block > div > div {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .navigation ul {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 34px;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-header .navigation ul > li {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-
-  white-space: nowrap;
-}
-
-header .navigation ul > li > a {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  height: 104px;
-
-  padding: 0;
-  margin: 0;
-
-  color: #c9c9c9;
-
-  font-size: 14px;
-  font-weight: 400;
-
-  text-decoration: none;
-
-  white-space: nowrap;
-
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
-}
-
-header .navigation ul > li > a:hover {
-  color: #d8b76a;
-}
-
-
-/* ==========================================
-   ACTIVE PAGE
-========================================== */
-
-header .navigation ul > li > a[aria-current="page"] {
-  color: #d8b76a;
-}
-
-header .navigation ul > li > a[aria-current="page"]::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: 28px;
-
-  width: 100%;
-  height: 2px;
-
-  background: #d8b76a;
-}
-
-
-/* ==========================================
-   RIGHT - GET IN TOUCH - 15%
-========================================== */
-
-header .get-in-touch-container {
-  width: 100%;
-  height: 104px;
-
-  margin: 0;
-  padding: 0 30px 0 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  box-sizing: border-box;
-}
-
-header .get-in-touch-wrapper,
-header .get-in-touch.block,
-header .get-in-touch.block > div,
-header .get-in-touch.block > div > div {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .get-in-touch.block p {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-header .icon-get-in-touch {
-  box-sizing: border-box;
-
-  width: 150px;
-  height: 50px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 15px 0 20px;
-
-  border: 1px solid #a47d2e;
-  border-radius: 6px;
-
-  color: #d8b76a;
-
-  cursor: pointer;
-}
-
-
-/* Hide broken SVG/image */
-
-header .icon-get-in-touch img {
-  display: none;
-}
-
-
-/* Button text */
-
-header .icon-get-in-touch::before {
-  content: "Get In Touch";
-
-  color: #d8b76a;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-
-  white-space: nowrap;
-}
-
-
-/* Arrow */
-
-header .icon-get-in-touch::after {
-  content: "→";
-
-  color: #d8b76a;
-
-  font-size: 20px;
-  font-weight: 300;
-
-  line-height: 1;
-}
-
-
-/* ==========================================
-   HAMBURGER - DESKTOP HIDDEN
-========================================== */
-
-header .nav-hamburger {
-  display: none;
-}
-
-
-/* ==========================================
-   TABLET
-========================================== */
-
-@media (width >= 900px) and (width < 1200px) {
-
-  header .logo-container {
-    padding-left: 25px;
-  }
-
-  header .logo.block img {
-    width: 270px;
-  }
-
-  header .navigation ul {
-    gap: 20px;
-  }
-
-  header .navigation ul > li > a {
-    font-size: 13px;
-  }
-
-  header .get-in-touch-container {
-    padding-right: 20px;
-  }
-
-  header .icon-get-in-touch {
-    width: 130px;
-  }
-}
-
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (width < 900px) {
-
-  header nav {
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header-wrapper {
     width: 100%;
-    height: 78px;
-    min-height: 78px;
+    height: 80px;
+    background: #111111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 100;
+}
 
-    padding: 0 20px;
+.header {
+    width: 100%;
+    height: 100%;
+}
 
-    display: grid;
+.header .nav-wrapper {
+    max-width: 1280px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
 
-    grid-template-columns: 28px 1fr;
-
-    gap: 15px;
-  }
-
-  header .nav-hamburger {
+.header #nav {
+    width: 100%;
+    height: 100%;
     display: flex;
-    visibility: visible;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    width: 28px;
-    height: 24px;
+/* =========================================================
+   LOGO
+   ========================================================= */
 
+.header .nav-brand {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header .logo-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo > div,
+.header .logo > div > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo picture {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    display: block;
+    width: auto;
+    height: 68px;
+    max-width: 250px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.header .nav-sections {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 48px;
+}
+
+.header .navigation-wrapper,
+.header .navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation > div,
+.header .navigation > div > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.header .navigation a {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: #bdb6aa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.header .navigation a:hover {
+    color: #f2ca50;
+}
+
+/* Active Home */
+
+.header .navigation li:first-child a {
+    color: #f2ca50;
+    border-bottom: 1px solid #f2ca50;
+}
+
+/* =========================================================
+   GET IN TOUCH BUTTON
+   ========================================================= */
+
+.header .nav-tools {
+    flex-shrink: 0;
+}
+
+.header .get-in-touch-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .get-in-touch {
+    display: flex;
+    align-items: center;
+}
+
+.header .get-in-touch > div,
+.header .get-in-touch > div > div {
+    display: flex;
+    align-items: center;
+}
+
+.header .get-in-touch p {
+    margin: 0;
+    min-height: 50px;
+    padding: 0 28px;
+    display: flex;
     align-items: center;
     justify-content: center;
-  }
 
-  header .logo-container {
-    width: 230px;
-    max-width: 230px;
+    background: #f2ca50;
+    color: #111111;
 
-    height: 78px;
+    border-radius: 6px;
 
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.header .get-in-touch p:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.header .nav-hamburger {
+    display: none;
+}
+
+.header .nav-hamburger button {
+    width: 42px;
+    height: 42px;
     padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
 
-    display: flex;
-    align-items: center;
-  }
-
-  header .logo.block img {
-    width: 230px;
-    max-width: 100%;
-  }
-
-  header .nav-sections {
-    display: none;
-    visibility: hidden;
-  }
-
-  header .get-in-touch-container {
-    display: none;
-  }
-
-  /* Open mobile menu */
-
-  header nav[aria-expanded="true"] {
-    height: auto;
-    min-height: 100dvh;
-
-    grid-template-columns: 28px 1fr;
-    grid-template-rows: 78px auto;
-
-    align-items: start;
-
-    overflow-y: auto;
-  }
-
-  header nav[aria-expanded="true"] .nav-sections {
-    grid-column: 1 / -1;
-    grid-row: 2;
-
-    width: 100%;
-
+.header .nav-hamburger-icon {
+    position: relative;
     display: block;
-    visibility: visible;
-  }
+    width: 24px;
+    height: 2px;
+    background: #eeeeee;
+}
 
-  header nav[aria-expanded="true"] .navigation ul {
-    display: block;
+.header .nav-hamburger-icon::before,
+.header .nav-hamburger-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #eeeeee;
+}
 
-    width: 100%;
+.header .nav-hamburger-icon::before {
+    top: -7px;
+}
 
-    margin: 20px 0 0;
-  }
+.header .nav-hamburger-icon::after {
+    top: 7px;
+}
 
-  header nav[aria-expanded="true"] .navigation ul > li > a {
-    width: 100%;
-    height: auto;
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-    padding: 15px 0;
+@media (max-width: 1000px) {
+    .header .nav-wrapper {
+        padding: 0 24px;
+    }
 
-    font-size: 15px;
-  }
+    .header .logo img {
+        height: 62px;
+        max-width: 220px;
+    }
+
+    .header .nav-sections {
+        margin-right: 24px;
+    }
+
+    .header .navigation ul {
+        gap: 22px;
+    }
+
+    .header .navigation a {
+        font-size: 13px;
+    }
+
+    .header .get-in-touch p {
+        min-height: 46px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .header-wrapper {
+        height: 72px;
+    }
+
+    .header .nav-wrapper {
+        height: 72px;
+        padding: 0 20px;
+    }
+
+    .header #nav {
+        height: 72px;
+    }
+
+    /* Logo */
+
+    .header .nav-brand {
+        order: 1;
+    }
+
+    .header .logo img {
+        height: 58px;
+        max-width: 210px;
+    }
+
+    /* Hide desktop navigation */
+
+    .header .nav-sections {
+        display: none;
+    }
+
+    /* CTA */
+
+    .header .nav-tools {
+        order: 2;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    .header .get-in-touch p {
+        min-height: 42px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    /* Hamburger */
+
+    .header .nav-hamburger {
+        display: flex;
+        align-items: center;
+        order: 3;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+    .header-wrapper {
+        height: 68px;
+    }
+
+    .header .nav-wrapper,
+    .header #nav {
+        height: 68px;
+    }
+
+    .header .nav-wrapper {
+        padding: 0 16px;
+    }
+
+    .header .logo img {
+        height: 54px;
+        max-width: 185px;
+    }
+
+    .header .get-in-touch p {
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    .header .nav-tools {
+        margin-right: 6px;
+    }
 }
