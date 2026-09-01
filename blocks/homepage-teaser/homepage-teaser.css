@@ -3,7 +3,6 @@
    HOMEPAGE TEASER
    ========================================================= */
 
-
 /* =========================================================
    FULL-WIDTH SECTION
    Remove EDS default section constraints
@@ -11,78 +10,74 @@
 
 main .homepage-teaser-container,
 main .section.homepage-teaser-container {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 40px 0 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 40px 0 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
 }
 
 main .homepage-teaser-container {
-  margin-top: 40px !important;
+    margin-top: 40px !important;
 }
-
 
 /* =========================================================
    BLOCK WRAPPER
    ========================================================= */
 
 .homepage-teaser-wrapper {
-  width: 100% !important;
-  max-width: none !important;
+    width: 100% !important;
+    max-width: none !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 
 /* =========================================================
    MAIN HERO
    ========================================================= */
 
 .homepage-teaser {
-  position: relative;
+    position: relative;
 
-  width: 100% !important;
-  max-width: none !important;
+    width: 100% !important;
+    max-width: none !important;
 
-  min-height: 520px;
+    min-height: 520px;
 
-  margin: 0 !important;
-  padding: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  background: #050608;
+    background: #050608;
 
-  color: #ffffff;
+    color: #ffffff;
 
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-  overflow: hidden;
+    overflow: hidden;
 }
-
 
 /* =========================================================
    CONTENT OUTER
    ========================================================= */
 
 .homepage-teaser > div {
-  width: 100%;
+    width: 100%;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 
 /* =========================================================
    CONTENT INNER
@@ -90,367 +85,343 @@ main .homepage-teaser-container {
    ========================================================= */
 
 .homepage-teaser > div > div {
-  width: 100%;
-  max-width: 1400px;
+    width: 100%;
+    max-width: 1400px;
 
-  min-height: 520px;
+    min-height: 520px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 
-  padding: 80px 50px;
+    padding: 80px 50px;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  text-align: center;
+    text-align: center;
 }
-
 
 /* =========================================================
    HEADING
    ========================================================= */
 
 .homepage-teaser h3 {
-  margin: 0 0 22px;
-  padding: 0;
+    margin: 0 0 22px;
+    padding: 0;
 
-  max-width: 850px;
+    max-width: 850px;
 
-  color: #ffffff;
+    color: #ffffff;
 
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 48px;
+    font-size: 48px;
 
-  font-weight: 600;
+    font-weight: 600;
 
-  line-height: 1.15;
+    line-height: 1.15;
 
-  letter-spacing: -0.5px;
+    letter-spacing: -0.5px;
 
-  text-align: center;
+    text-align: center;
 }
-
 
 /* Gold text */
 
 .homepage-teaser h3 span {
-  color: #d8b76a;
+    color: #d8b76a;
 }
-
 
 /* =========================================================
    DESCRIPTION
    ========================================================= */
 
 .homepage-teaser p {
-  width: 100%;
-  max-width: 700px;
+    width: 100%;
+    max-width: 700px;
 
-  margin: 0 auto 32px;
-  padding: 0;
+    margin: 0 auto 32px;
+    padding: 0;
 
-  color: #d2d2d2;
+    color: #d2d2d2;
 
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 16px;
+    font-size: 16px;
 
-  font-weight: 400;
+    font-weight: 400;
 
-  line-height: 1.7;
+    line-height: 1.7;
 
-  text-align: center;
+    text-align: center;
 }
-
 
 /* =========================================================
    BUTTON LIST
    ========================================================= */
 
 .homepage-teaser ul {
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  gap: 25px;
+    gap: 25px;
 
-  width: 100%;
+    width: 100%;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  list-style: none;
+    list-style: none;
 }
-
 
 /* =========================================================
    BUTTON ITEM
    ========================================================= */
 
 .homepage-teaser li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  list-style: none;
+    list-style: none;
 }
-
 
 /* =========================================================
    BUTTON
    ========================================================= */
 
 .homepage-teaser li a {
-  width: 240px;
-  height: 50px;
+    width: 240px;
+    height: 50px;
 
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  margin: 0;
-  padding: 0 18px 0 25px;
+    margin: 0;
+    padding: 0 18px 0 25px;
 
-  border: 1px solid #a47d2e;
+    border: 1px solid #a47d2e;
 
-  border-radius: 6px;
+    border-radius: 6px;
 
-  background: transparent;
+    background: transparent;
 
-  color: #d8b76a;
+    color: #d8b76a;
 
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 14px;
+    font-size: 14px;
 
-  font-weight: 500;
+    font-weight: 500;
 
-  line-height: 1;
+    line-height: 1;
 
-  text-decoration: none;
+    text-decoration: none;
 
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
-
 
 /* =========================================================
    FIRST BUTTON
    ========================================================= */
 
 .homepage-teaser li:first-child a {
-  background: #e5c477;
+    background: #e5c477;
 
-  border-color: #e5c477;
+    border-color: #e5c477;
 
-  color: #050608;
+    color: #050608;
 }
-
 
 /* =========================================================
    SECOND BUTTON
    ========================================================= */
 
 .homepage-teaser li:nth-child(2) a {
-  background: transparent;
+    background: transparent;
 
-  border-color: #a47d2e;
+    border-color: #a47d2e;
 
-  color: #d8b76a;
+    color: #d8b76a;
 }
-
 
 /* =========================================================
    ARROW
    ========================================================= */
 
 .homepage-teaser .homepage-teaser-arrow {
-  margin-left: 20px;
+    margin-left: 20px;
 
-  color: inherit;
+    color: inherit;
 
-  font-size: 20px;
+    font-size: 20px;
 
-  font-weight: 300;
+    font-weight: 300;
 
-  line-height: 1;
+    line-height: 1;
 }
-
 
 /* =========================================================
    BUTTON HOVER
    ========================================================= */
 
 .homepage-teaser li a:hover {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }
-
 
 /* First button */
 
 .homepage-teaser li:first-child a:hover {
-  background: #f0d58f;
+    background: #f0d58f;
 
-  border-color: #f0d58f;
+    border-color: #f0d58f;
 
-  color: #050608;
+    color: #050608;
 }
-
 
 /* Second button */
 
 .homepage-teaser li:nth-child(2) a:hover {
-  background: #d8b76a;
+    background: #d8b76a;
 
-  border-color: #d8b76a;
+    border-color: #d8b76a;
 
-  color: #050608;
+    color: #050608;
 }
-
 
 /* =========================================================
    FOCUS
    ========================================================= */
 
 .homepage-teaser li a:focus-visible {
-  outline: 2px solid #d8b76a;
+    outline: 2px solid #d8b76a;
 
-  outline-offset: 4px;
+    outline-offset: 4px;
 }
-
 
 /* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 1100px) {
+    .homepage-teaser {
+        min-height: 500px;
+    }
 
-  .homepage-teaser {
-    min-height: 500px;
-  }
+    .homepage-teaser > div > div {
+        min-height: 500px;
 
-  .homepage-teaser > div > div {
-    min-height: 500px;
+        padding: 70px 40px;
+    }
 
-    padding: 70px 40px;
-  }
+    .homepage-teaser h3 {
+        max-width: 750px;
 
-  .homepage-teaser h3 {
-    max-width: 750px;
+        font-size: 42px;
+    }
 
-    font-size: 42px;
-  }
+    .homepage-teaser p {
+        max-width: 650px;
 
-  .homepage-teaser p {
-    max-width: 650px;
+        font-size: 15px;
+    }
 
-    font-size: 15px;
-  }
+    .homepage-teaser ul {
+        gap: 20px;
+    }
 
-  .homepage-teaser ul {
-    gap: 20px;
-  }
-
-  .homepage-teaser li a {
-    width: 220px;
-  }
+    .homepage-teaser li a {
+        width: 220px;
+    }
 }
-
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
+    main .homepage-teaser-container,
+    main .section.homepage-teaser-container {
+        width: 100% !important;
+        max-width: none !important;
 
-  main .homepage-teaser-container,
-  main .section.homepage-teaser-container {
-    width: 100% !important;
-    max-width: none !important;
+        margin: 0 !important;
 
-    margin: 0 !important;
+        padding: 0 !important;
+    }
 
-    padding: 0 !important;
-  }
+    .homepage-teaser {
+        min-height: 520px;
+    }
 
+    .homepage-teaser > div > div {
+        min-height: 520px;
 
-  .homepage-teaser {
-    min-height: 520px;
-  }
+        padding: 55px 20px;
+    }
 
+    /* Heading */
 
-  .homepage-teaser > div > div {
-    min-height: 520px;
+    .homepage-teaser h3 {
+        max-width: 100%;
 
-    padding: 55px 20px;
-  }
+        margin-bottom: 18px;
 
+        font-size: 32px;
 
-  /* Heading */
+        line-height: 1.18;
 
-  .homepage-teaser h3 {
-    max-width: 100%;
+        letter-spacing: 0;
+    }
 
-    margin-bottom: 18px;
+    /* Description */
 
-    font-size: 32px;
+    .homepage-teaser p {
+        max-width: 100%;
 
-    line-height: 1.18;
+        margin-bottom: 28px;
 
-    letter-spacing: 0;
-  }
+        font-size: 14px;
 
+        line-height: 1.65;
+    }
 
-  /* Description */
+    /* Buttons */
 
-  .homepage-teaser p {
-    max-width: 100%;
+    .homepage-teaser ul {
+        width: 100%;
 
-    margin-bottom: 28px;
+        flex-direction: column;
 
-    font-size: 14px;
+        gap: 14px;
+    }
 
-    line-height: 1.65;
-  }
+    .homepage-teaser li {
+        width: 100%;
 
+        display: flex;
 
-  /* Buttons */
+        justify-content: center;
+    }
 
-  .homepage-teaser ul {
-    width: 100%;
+    .homepage-teaser li a {
+        width: 280px;
 
-    flex-direction: column;
+        max-width: 100%;
 
-    gap: 14px;
-  }
-
-
-  .homepage-teaser li {
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-  }
-
-
-  .homepage-teaser li a {
-    width: 280px;
-
-    max-width: 100%;
-
-    height: 50px;
-  }
+        height: 50px;
+    }
 }
