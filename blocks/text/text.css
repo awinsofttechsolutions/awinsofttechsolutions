@@ -1,0 +1,322 @@
+.text-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: var(--section-gap) var(--margin-mobile);
+    overflow: hidden;
+    background: var(--surface-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.text-container > .text-wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+}
+.text-container .text {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.text-container > .library-metadata-wrapper {
+    display: none;
+}
+.text-container .text > div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 16px;
+}
+.text-container .text > div > .text-image,
+.text-container .text > div > div:first-child {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+}
+.text-container .text > div > .text-image picture,
+.text-container .text > div > div:first-child picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.text-container .text > div > .text-image img,
+.text-container .text > div > div:first-child img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.3;
+}
+.text-container .text > div > .text-content,
+.text-container .text > div > div:last-child {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.text-container.text-left .text > div {
+    justify-content: flex-start;
+    align-items: center;
+}
+.text-container.text-left .text > div > .text-content,
+.text-container.text-left .text > div > div:last-child {
+    width: 60%;
+    margin: 0;
+    padding: var(--section-gap) 0;
+    text-align: left;
+}
+.text-container.text-right .text > div {
+    justify-content: flex-end;
+    align-items: center;
+}
+.text-container.text-right .text > div > .text-content,
+.text-container.text-right .text > div > div:last-child {
+    width: 60%;
+    margin: 0 0 0 auto;
+    padding: var(--section-gap) 0;
+    text-align: left;
+}
+.text-container.text-center .text > div {
+    justify-content: center;
+    align-items: center;
+}
+.text-container.text-center .text > div > .text-content,
+.text-container.text-center .text > div > div:last-child {
+    width: 100%;
+    max-width: 896px;
+    margin: 0 auto;
+    padding: var(--section-gap) 0;
+    text-align: center;
+}
+.text-container .text h6 {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 6px 12px;
+    color: var(--primary-color);
+    font-family: var(--heading-font-family);
+    font-size: var(--body-font-size-xs);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(242, 202, 80, 0.1);
+    border: 1px solid rgba(242, 202, 80, 0.2);
+    border-radius: 999px;
+}
+.text-container .text h3 {
+    max-width: 900px;
+    margin: 0 0 32px;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--heading-font-family);
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+.text-container.text-center .text h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-container .text h4 {
+    margin: 0 0 16px;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size-m);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+.text-container .text p {
+    max-width: 672px;
+    margin: 0 0 48px;
+    padding: 0;
+    color: var(--muted-text-color);
+    font-family: var(--body-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+.text-container.text-center .text p {
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-container .text ul,
+.text-container .text ul.text-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.text-container .text ul li,
+.text-container .text .text-button-item {
+    margin: 0;
+    padding: 0;
+}
+.text-container .text ul li a,
+.text-container .text a.text-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    margin: 0;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    color: var(--dark-color);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-xs);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+.text-container .text ul li a:hover,
+.text-container .text a.text-button:hover {
+    color: var(--dark-color);
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+.text-container.text-center .text ul,
+.text-container.text-center .text-buttons {
+    justify-content: center;
+}
+@media (min-width: 900px) {
+    .text-container {
+        padding-left: var(--margin-desktop);
+        padding-right: var(--margin-desktop);
+    }
+}
+@media (max-width: 899px) {
+    .text-container {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        padding-left: var(--margin-mobile);
+        padding-right: var(--margin-mobile);
+    }
+    .text-container .text > div > .text-image,
+    .text-container .text > div > div:first-child {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .text-container .text > div > .text-image img,
+    .text-container .text > div > div:first-child img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+        opacity: 0.3;
+    }
+    .text-container .text > div > .text-content,
+    .text-container .text > div > div:last-child {
+        width: 100%;
+        margin: 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .text-container.text-left .text > div > .text-content,
+    .text-container.text-left .text > div > div:last-child {
+        width: 100%;
+        margin: 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        text-align: left;
+    }
+    .text-container.text-right .text > div > .text-content,
+    .text-container.text-right .text > div > div:last-child {
+        width: 100%;
+        margin: 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        text-align: left;
+    }
+    .text-container.text-center .text > div > .text-content,
+    .text-container.text-center .text > div > div:last-child {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        text-align: center;
+    }
+    .text-container .text h3 {
+        margin-bottom: 32px;
+        font-size: clamp(32px, 8vw, 44px);
+    }
+    .text-container .text h4 {
+        margin-bottom: 16px;
+        font-size: 24px;
+    }
+    .text-container .text p {
+        margin-bottom: 48px;
+        font-size: 16px;
+    }
+    .text-container .text ul,
+    .text-container .text ul.text-buttons {
+        gap: 12px;
+    }
+    .text-container .text ul li a,
+    .text-container .text a.text-button {
+        width: 100%;
+        min-height: 56px;
+        padding: 20px 40px;
+    }
+}
+@media (max-width: 600px) {
+    .text-container {
+        padding-top: 56px;
+        padding-bottom: 56px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .text-container.text-left .text > div > .text-content,
+    .text-container.text-left .text > div > div:last-child,
+    .text-container.text-right .text > div > .text-content,
+    .text-container.text-right .text > div > div:last-child,
+    .text-container.text-center .text > div > .text-content,
+    .text-container.text-center .text > div > div:last-child {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .text-container .text h3 {
+        font-size: 32px;
+    }
+    .text-container .text h4 {
+        font-size: 22px;
+    }
+    .text-container .text p {
+        font-size: 15px;
+    }
+}
