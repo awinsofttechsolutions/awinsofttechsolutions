@@ -1,0 +1,10 @@
+{
+  "paths": {
+    "mappings": [
+      "/sites/:/"
+    ],
+    "includes": [
+      "/sites/"
+    ]
+  }
+}
