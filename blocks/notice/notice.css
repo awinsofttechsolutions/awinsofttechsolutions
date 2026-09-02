@@ -1,0 +1,257 @@
+main > .section.notice-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: var(--section-gap) var(--margin-mobile);
+    overflow: hidden;
+    background: var(--surface-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+main > .section.notice-container > .notice-wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+}
+main > .section.notice-container .notice {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+main > .section.notice-container > .library-metadata-wrapper {
+    display: none;
+}
+main > .section.notice-container .notice > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+main > .section.notice-container .notice .notice-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 96px;
+    height: 96px;
+    margin: 0 0 32px;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(242, 202, 80, 0.08);
+    border: 1px solid rgba(242, 202, 80, 0.2);
+    border-radius: 50%;
+}
+main > .section.notice-container .notice .notice-icon picture {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+}
+main > .section.notice-container .notice .notice-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    opacity: 1;
+}
+main > .section.notice-container .notice .notice-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+main > .section.notice-container .notice h6 {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 6px 12px;
+    color: var(--primary-color);
+    font-family: var(--heading-font-family);
+    font-size: var(--body-font-size-xs);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(242, 202, 80, 0.1);
+    border: 1px solid rgba(242, 202, 80, 0.2);
+    border-radius: 999px;
+}
+main > .section.notice-container .notice h3 {
+    max-width: 896px;
+    margin: 0 auto 32px;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--heading-font-family);
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-align: center;
+}
+main > .section.notice-container .notice p {
+    max-width: 672px;
+    margin: 0 auto 48px;
+    padding: 0;
+    color: var(--muted-text-color);
+    font-family: var(--body-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
+    text-align: center;
+}
+main > .section.notice-container .notice ul,
+main > .section.notice-container .notice ul.notice-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+main > .section.notice-container .notice ul li,
+main > .section.notice-container .notice .notice-button-item {
+    margin: 0;
+    padding: 0;
+}
+main > .section.notice-container .notice ul li a,
+main > .section.notice-container .notice a.notice-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    margin: 0;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    color: var(--dark-color);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-xs);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+main > .section.notice-container .notice ul li a:hover,
+main > .section.notice-container .notice a.notice-button:hover {
+    color: var(--dark-color);
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+main > .section.notice-container .notice ul li:nth-child(2) a {
+    color: var(--primary-color);
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+}
+main > .section.notice-container .notice ul li:nth-child(2) a:hover {
+    color: var(--primary-color);
+    background: rgba(242, 202, 80, 0.1);
+    border-color: var(--primary-color);
+}
+main > .section.page-maintenance.notice-container {
+}
+main > .section.site-maintenance.notice-container {
+}
+@media (min-width: 900px) {
+    main > .section.notice-container {
+        padding-top: var(--section-gap);
+        padding-bottom: var(--section-gap);
+        padding-left: var(--margin-desktop);
+        padding-right: var(--margin-desktop);
+    }
+}
+@media (max-width: 899px) {
+    main > .section.notice-container {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        padding-left: var(--margin-mobile);
+        padding-right: var(--margin-mobile);
+    }
+    main > .section.notice-container .notice .notice-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 24px;
+    }
+    main > .section.notice-container .notice .notice-icon picture {
+        width: 52px;
+        height: 52px;
+    }
+    main > .section.notice-container .notice .notice-content {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+    main > .section.notice-container .notice h3 {
+        margin-bottom: 32px;
+        font-size: clamp(32px, 8vw, 44px);
+    }
+    main > .section.notice-container .notice p {
+        margin-bottom: 48px;
+        font-size: 16px;
+    }
+    main > .section.notice-container .notice ul,
+    main > .section.notice-container .notice ul.notice-buttons {
+        gap: 12px;
+    }
+    main > .section.notice-container .notice ul li {
+        width: 100%;
+    }
+    main > .section.notice-container .notice ul li a,
+    main > .section.notice-container .notice a.notice-button {
+        width: 100%;
+        min-height: 56px;
+        padding: 20px 40px;
+    }
+}
+@media (max-width: 600px) {
+    main > .section.notice-container {
+        padding-top: 56px;
+        padding-bottom: 56px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    main > .section.notice-container .notice .notice-icon {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 20px;
+    }
+    main > .section.notice-container .notice .notice-icon picture {
+        width: 46px;
+        height: 46px;
+    }
+    main > .section.notice-container .notice .notice-content {
+        padding: 0;
+    }
+    main > .section.notice-container .notice h3 {
+        font-size: 32px;
+    }
+    main > .section.notice-container .notice p {
+        font-size: 15px;
+    }
+}
