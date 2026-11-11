@@ -6,16 +6,19 @@
     position: relative;
     z-index: 100;
 }
+
 .header {
     width: 100%;
     height: 100%;
 }
+
 .header .nav-wrapper {
     max-width: 1280px;
     height: 120px;
     margin: 0 auto;
     padding: 0 32px;
 }
+
 .header #nav {
     width: 100%;
     height: 100%;
@@ -23,39 +26,46 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .header .nav-brand {
     height: 100%;
     display: flex;
     align-items: center;
     flex-shrink: 0;
 }
+
 .header .logo-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .logo {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .logo > div,
 .header .logo > div > div {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .logo picture {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .logo img {
     display: block;
     width: auto;
     height: 68px;
     object-fit: contain;
 }
+
 .header .nav-sections {
     height: 100%;
     display: flex;
@@ -63,18 +73,21 @@
     margin-left: auto;
     margin-right: 48px;
 }
+
 .header .navigation,
 .header .navigation-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .navigation > div,
 .header .navigation > div > div {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .navigation ul {
     display: flex;
     align-items: center;
@@ -83,10 +96,12 @@
     margin: 0;
     padding: 0;
 }
+
 .header .navigation li {
     margin: 0;
     padding: 0;
 }
+
 .header .navigation a {
     display: flex;
     align-items: center;
@@ -100,30 +115,38 @@
         color 0.2s ease,
         border-color 0.2s ease;
 }
+
 .header .navigation a:hover {
     color: #f2ca50;
 }
-.header .navigation li:first-child a {
+
+/* Active navigation link - based on current page URL */
+.header .navigation a[aria-current="page"] {
     color: #f2ca50;
     border-bottom: 1px solid #f2ca50;
 }
+
 .header .nav-tools {
     flex-shrink: 0;
 }
+
 .header .get-in-touch-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
 }
+
 .header .get-in-touch {
     display: flex;
     align-items: center;
 }
+
 .header .get-in-touch > div,
 .header .get-in-touch > div > div {
     display: flex;
     align-items: center;
 }
+
 .header .get-in-touch p {
     margin: 0;
     min-height: 50px;
@@ -143,13 +166,16 @@
         opacity 0.2s ease,
         transform 0.2s ease;
 }
+
 .header .get-in-touch p:hover {
     opacity: 0.9;
     transform: translateY(-1px);
 }
+
 .header .nav-hamburger {
     display: none;
 }
+
 .header .nav-hamburger button {
     width: 42px;
     height: 42px;
@@ -158,6 +184,7 @@
     background: 0 0;
     cursor: pointer;
 }
+
 .header .nav-hamburger-icon {
     position: relative;
     display: block;
@@ -165,6 +192,7 @@
     height: 2px;
     background: #eee;
 }
+
 .header .nav-hamburger-icon::after,
 .header .nav-hamburger-icon::before {
     content: "";
@@ -174,92 +202,115 @@
     height: 2px;
     background: #eee;
 }
+
 .header .nav-hamburger-icon::before {
     top: -7px;
 }
+
 .header .nav-hamburger-icon::after {
     top: 7px;
 }
+
 @media (max-width: 1000px) {
     .header .nav-wrapper {
         padding: 0 24px;
     }
+
     .header .logo img {
         height: 62px;
         max-width: 220px;
     }
+
     .header .nav-sections {
         margin-right: 24px;
     }
+
     .header .navigation ul {
         gap: 22px;
     }
+
     .header .navigation a {
         font-size: 13px;
     }
+
     .header .get-in-touch p {
         min-height: 46px;
         padding: 0 20px;
         font-size: 13px;
     }
 }
+
 @media (max-width: 768px) {
     .header-wrapper {
         height: 72px;
     }
+
     .header .nav-wrapper {
         height: 72px;
         padding: 0 20px;
     }
+
     .header #nav {
         height: 72px;
     }
+
     .header .nav-brand {
         order: 1;
     }
+
     .header .logo img {
         height: 58px;
         max-width: 210px;
     }
+
     .header .nav-sections {
         display: none;
     }
+
     .header .nav-tools {
         order: 2;
         margin-left: auto;
         margin-right: 12px;
     }
+
     .header .get-in-touch p {
         min-height: 42px;
         padding: 0 16px;
         font-size: 12px;
     }
+
     .header .nav-hamburger {
         display: flex;
         align-items: center;
         order: 3;
     }
 }
+
 @media (max-width: 480px) {
     .header-wrapper {
         height: 68px;
     }
+
     .header #nav,
     .header .nav-wrapper {
         height: 68px;
     }
+
     .header .nav-wrapper {
         padding: 0 16px;
     }
+
     .header .logo img {
         height: 54px;
         max-width: 185px;
     }
+
     .header .get-in-touch p {
         min-height: 40px;
         padding: 0 12px;
         font-size: 11px;
     }
+
     .header .nav-tools {
         margin-right: 6px;
     }
