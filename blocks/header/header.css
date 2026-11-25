@@ -6,6 +6,7 @@
   border-bottom: var(--awin-border-width) solid var(--awin-color-border);
   position: relative;
   z-index: var(--awin-z-sticky);
+  box-sizing: border-box;
 }
 
 .header {
@@ -14,10 +15,12 @@
 }
 
 .header .nav-wrapper {
+  width: 100%;
   max-width: var(--awin-container-width);
   height: 100%;
   margin: 0 auto;
   padding: 0 var(--awin-page-gutter);
+  box-sizing: border-box;
 }
 
 .header #nav {
@@ -35,18 +38,8 @@
   flex-shrink: 0;
 }
 
-.header .logo-wrapper {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.header .logo {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
+.header .logo-wrapper,
+.header .logo,
 .header .logo picture {
   height: 100%;
   display: flex;
@@ -58,6 +51,7 @@
   width: auto;
   height: 68px;
   object-fit: contain;
+  transform: translateY(8px);
 }
 
 .header .nav-sections {
@@ -86,7 +80,12 @@
   align-items: center;
 }
 
-.header .logo > div,
+.header .logo > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .header .logo > div > div {
   height: 100%;
   display: flex;
@@ -225,22 +224,24 @@
   top: 7px;
 }
 
-@media (width <= 1000px) {
+/* Tablet */
+@media (width <= 1000px) and (width > 768px) {
   .header .nav-wrapper {
     padding: 0 var(--awin-space-6);
   }
 
   .header .logo img {
-    height: 62px;
-    max-width: 220px;
+    height: 58px;
+    max-width: 200px;
+    transform: translateY(6px);
   }
 
   .header .nav-sections {
-    margin-right: var(--awin-space-6);
+    margin-right: var(--awin-space-5);
   }
 
   .header .navigation ul {
-    gap: var(--awin-space-5);
+    gap: var(--awin-space-4);
   }
 
   .header .navigation a {
@@ -248,89 +249,13 @@
   }
 
   .header .get-in-touch p {
-    min-height: 46px;
-    padding: 0 var(--awin-space-5);
-    font-size: var(--awin-text-caption);
-  }
-}
-
-@media (width <= 768px) {
-  .header-wrapper {
-    height: 72px;
-  }
-
-  .header .nav-wrapper {
-    height: 72px;
-    padding: 0 var(--awin-space-5);
-  }
-
-  .header #nav {
-    height: 72px;
-  }
-
-  .header .nav-brand {
-    order: 1;
-  }
-
-  .header .logo img {
-    height: 58px;
-    max-width: 210px;
-  }
-
-  .header .nav-sections {
-    display: none;
-  }
-
-  .header .nav-tools {
-    order: 2;
-    margin-left: auto;
-    margin-right: var(--awin-space-3);
-  }
-
-  .header .get-in-touch p {
-    min-height: 42px;
+    min-height: 44px;
     padding: 0 var(--awin-space-4);
     font-size: var(--awin-text-caption);
   }
-
-  .header .nav-hamburger {
-    display: flex;
-    align-items: center;
-    order: 3;
-  }
 }
 
-@media (width <= 480px) {
-  .header-wrapper {
-    height: 68px;
-  }
-
-  .header #nav,
-  .header .nav-wrapper {
-    height: 68px;
-  }
-
-  .header .nav-wrapper {
-    padding: 0 var(--awin-space-4);
-  }
-
-  .header .logo img {
-    height: 54px;
-    max-width: 185px;
-  }
-
-  .header .get-in-touch p {
-    min-height: 40px;
-    padding: 0 var(--awin-space-3);
-    font-size: var(--awin-text-caption);
-  }
-
-  .header .nav-tools {
-    margin-right: var(--awin-space-2);
-  }
-}
-
-
+/* Mobile */
 @media (width <= 768px) {
   .header-wrapper {
     height: auto;
@@ -364,6 +289,7 @@
   .header .logo img {
     height: 54px;
     max-width: 210px;
+    transform: none;
   }
 
   .header .nav-tools {
@@ -398,8 +324,8 @@
   .header .navigation-wrapper,
   .header .navigation > div,
   .header .navigation > div > div {
-    height: auto;
     width: 100%;
+    height: auto;
   }
 
   .header .navigation ul {
@@ -420,8 +346,8 @@
   .header .navigation a {
     height: auto;
     min-height: 36px;
-    font-size: var(--awin-text-body-small);
     padding: var(--awin-space-2) 0;
+    font-size: var(--awin-text-body-small);
   }
 
   .header .nav-hamburger {
@@ -429,6 +355,7 @@
   }
 }
 
+/* Small mobile */
 @media (width <= 480px) {
   .header .nav-wrapper {
     padding: var(--awin-space-3) var(--awin-space-4);
@@ -462,7 +389,14 @@
   }
 
   .header .navigation a {
-    font-size: var(--awin-text-caption);
     min-height: 32px;
+    font-size: var(--awin-text-caption);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header .navigation a,
+  .header .get-in-touch p {
+    transition: none;
   }
 }
