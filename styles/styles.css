@@ -1,17 +1,17 @@
 :root {
     --background-color: #050505;
-    --surface-color: #111111;
+    --surface-color: #111;
     --surface-container: #1c1c1c;
-    --light-color: #eeeeee;
-    --dark-color: #111111;
-    --text-color: #eeeeee;
+    --light-color: #eee;
+    --dark-color: #111;
+    --text-color: #eee;
     --muted-text-color: #bdb6aa;
     --primary-color: #f2ca50;
     --secondary-color: #ff8b00;
     --link-color: #f2ca50;
     --link-hover-color: #ff8b00;
-    --body-font-family: "Manrope", Arial, sans-serif;
-    --heading-font-family: "Manrope", Arial, sans-serif;
+    --body-font-family: "Manrope", arial, sans-serif;
+    --heading-font-family: "Manrope", arial, sans-serif;
     --body-font-size-m: 16px;
     --body-font-size-s: 14px;
     --body-font-size-xs: 12px;
@@ -26,22 +26,26 @@
     --margin-mobile: 24px;
     --margin-desktop: 64px;
 }
+
 @font-face {
     font-family: manrope-fallback;
     size-adjust: 100%;
     src: local("Arial");
 }
+
 *,
 ::after,
 ::before {
     box-sizing: border-box;
 }
+
 html {
     margin: 0;
     padding: 0;
     background: var(--background-color);
     scroll-behavior: smooth;
 }
+
 body {
     display: none;
     min-height: 100vh;
@@ -54,20 +58,25 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+
 body.appear {
     display: block;
 }
+
 footer .footer,
 header .header {
     visibility: hidden;
 }
+
 footer .footer[data-block-status="loaded"],
 header .header[data-block-status="loaded"] {
     visibility: visible;
 }
+
 header {
     height: var(--nav-height);
 }
+
 h1,
 h2,
 h3,
@@ -82,24 +91,31 @@ h6 {
     color: var(--text-color);
     scroll-margin: 40px;
 }
+
 h1 {
     font-size: var(--heading-font-size-xxl);
 }
+
 h2 {
     font-size: var(--heading-font-size-xl);
 }
+
 h3 {
     font-size: var(--heading-font-size-l);
 }
+
 h4 {
     font-size: var(--heading-font-size-m);
 }
+
 h5 {
     font-size: var(--heading-font-size-s);
 }
+
 h6 {
     font-size: var(--heading-font-size-xs);
 }
+
 blockquote,
 dl,
 ol,
@@ -109,48 +125,59 @@ ul {
     margin-top: 0;
     margin-bottom: 1em;
 }
+
 p {
     color: var(--muted-text-color);
 }
+
 ol,
 ul {
     padding-left: 1.5rem;
 }
+
 a:any-link {
     color: var(--link-color);
     text-decoration: none;
     overflow-wrap: break-word;
 }
+
 a:hover {
     color: var(--link-hover-color);
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 main img {
     max-width: 100%;
     width: auto;
     height: auto;
 }
+
 .icon {
     display: inline-block;
     width: 24px;
     height: 24px;
 }
+
 .icon img {
     width: 100%;
     height: 100%;
 }
+
 button,
 input,
 select,
 textarea {
     font: inherit;
 }
+
 p.button-wrapper {
     margin: 12px 0;
 }
+
 a.button:any-link,
 button.button {
     box-sizing: border-box;
@@ -171,12 +198,14 @@ button.button {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 a.button.primary,
 button.button.primary {
     border-color: var(--primary-color);
     background-color: var(--primary-color);
     color: var(--dark-color);
 }
+
 a.button.primary:focus-visible,
 a.button.primary:hover,
 button.button.primary:focus-visible,
@@ -185,26 +214,30 @@ button.button.primary:hover {
     background-color: var(--secondary-color);
     color: var(--dark-color);
 }
+
 a.button.secondary,
 button.button.secondary {
     border-color: var(--primary-color);
     background-color: transparent;
     color: var(--primary-color);
 }
+
 a.button.secondary:focus-visible,
 a.button.secondary:hover,
 button.button.secondary:focus-visible,
 button.button.secondary:hover {
     border-color: var(--primary-color);
-    background-color: rgba(242, 202, 80, 0.1);
+    background-color: rgb(242 202 80 / 10%);
     color: var(--primary-color);
 }
+
 a.button.accent,
 button.button.accent {
     border-color: var(--secondary-color);
     background-color: var(--secondary-color);
     color: #111;
 }
+
 a.button.accent:focus-visible,
 a.button.accent:hover,
 button.button.accent:focus-visible,
@@ -212,12 +245,14 @@ button.button.accent:hover {
     border-color: var(--primary-color);
     background-color: var(--primary-color);
 }
+
 a.button[aria-disabled="true"],
 button.button:disabled {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.5;
 }
+
 main {
     width: 100%;
     min-height: 100vh;
@@ -225,23 +260,28 @@ main {
     padding: 0;
     background: var(--background-color);
 }
+
 main > div {
     margin: 0;
     padding: 0;
 }
+
 main > .section {
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 main > .section > div {
     max-width: none;
     margin: 0;
     padding: 0;
 }
+
 main > .section:first-of-type {
     margin-top: 0;
 }
+
 .glow-overlay {
     position: fixed;
     inset: 0;
@@ -252,31 +292,35 @@ main > .section:first-of-type {
     background:
         radial-gradient(
             circle at 15% 20%,
-            rgba(242, 202, 80, 0.05),
+            rgb(242 202 80 / 5%),
             transparent 35%
         ),
         radial-gradient(
             circle at 85% 70%,
-            rgba(255, 139, 0, 0.035),
+            rgb(255 139 0 / 3.5%),
             transparent 35%
         );
 }
+
 footer,
 header,
 main {
     position: relative;
     z-index: 1;
 }
+
 main .section.highlight,
 main .section.light {
     margin: 0;
     padding: 0;
     background-color: var(--surface-color);
 }
+
 code,
 pre {
     font-size: var(--body-font-size-s);
 }
+
 pre {
     padding: 16px;
     border-radius: 8px;
@@ -285,6 +329,7 @@ pre {
     overflow-x: auto;
     white-space: pre;
 }
+
 @media (width >= 900px) {
     :root {
         --body-font-size-m: 16px;
@@ -298,33 +343,42 @@ pre {
         --heading-font-size-xs: 18px;
     }
 }
-@media (max-width: 899px) {
+
+@media (width <= 899px) {
     h1 {
         font-size: 42px;
     }
+
     h2 {
         font-size: 36px;
     }
+
     h3 {
         font-size: 28px;
     }
 }
-@media (max-width: 600px) {
+
+@media (width <= 600px) {
     :root {
         --nav-height: 72px;
     }
+
     body {
         font-size: 15px;
     }
+
     h1 {
         font-size: 36px;
     }
+
     h2 {
         font-size: 30px;
     }
+
     h3 {
         font-size: 25px;
     }
+
     main > .section > div {
         padding: 0;
     }

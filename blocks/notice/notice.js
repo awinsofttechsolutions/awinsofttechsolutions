@@ -34,7 +34,6 @@ export default function decorate(block) {
     columns[0].classList.add('notice-content');
   }
 
-
   /* Make sure picture column has notice-icon class */
 
   const picture = block.querySelector('picture');
@@ -46,7 +45,6 @@ export default function decorate(block) {
       imageColumn.classList.add('notice-icon');
     }
   }
-
 
   /* CTA buttons */
 
@@ -65,7 +63,6 @@ export default function decorate(block) {
       }
     });
   }
-
 
   /* Add variation class */
 

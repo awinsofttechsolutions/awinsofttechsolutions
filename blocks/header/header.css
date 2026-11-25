@@ -2,7 +2,7 @@
     width: 100%;
     height: 100px;
     background: #111;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
     position: relative;
     z-index: 100;
 }
@@ -211,7 +211,7 @@
     top: 7px;
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
     .header .nav-wrapper {
         padding: 0 24px;
     }
@@ -240,7 +240,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .header-wrapper {
         height: 72px;
     }
@@ -286,7 +286,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .header-wrapper {
         height: 68px;
     }

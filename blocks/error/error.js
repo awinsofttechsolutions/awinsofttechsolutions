@@ -5,13 +5,11 @@ export default function decorate(block) {
 
   const number = content.querySelector('h1')?.textContent.trim() || '404';
 
-  const title =
-    content.querySelector('h3')?.textContent.trim() ||
-    'Lost in AWIN Softtech Solutions website?';
+  const title = content.querySelector('h3')?.textContent.trim()
+    || 'Lost in AWIN Softtech Solutions website?';
 
-  const description =
-    content.querySelector('p')?.textContent.trim() ||
-    'The page you are looking for might have been moved, deleted, or never existed. Let’s get you back on track with our premium recruitment and training solutions.';
+  const description = content.querySelector('p')?.textContent.trim()
+    || 'The page you are looking for might have been moved, deleted, or never existed. Let’s get you back on track with our premium recruitment and training solutions.';
 
   const authoredLinks = [...content.querySelectorAll('ul a')];
 
@@ -101,14 +99,12 @@ export default function decorate(block) {
       const button = document.createElement('a');
 
       button.href = link.href;
-      button.textContent =
-        link.textContent.trim() ||
-        (index === 0 ? 'Back to Home' : 'Explore Training');
+      button.textContent = link.textContent.trim()
+        || (index === 0 ? 'Back to Home' : 'Explore Training');
 
-      button.className =
-        index === 0
-          ? 'error-button error-button-primary'
-          : 'error-button error-button-secondary';
+      button.className = index === 0
+        ? 'error-button error-button-primary'
+        : 'error-button error-button-secondary';
 
       actions.append(button);
     });
