@@ -1,297 +1,436 @@
 
 .text-container {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: var(--awin-space-9) 24px;
-  overflow: hidden;
-  background: var(--awin-color-bg);
-  border-top: 1px solid var(--awin-color-border);
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--awin-color-background);
 }
 
 .text-container > .text-wrapper {
-  width: 100%;
-  max-width: var(--awin-container);
-  margin: 0 auto;
+    width: 100%;
+    max-width: var(--awin-content-width);
+    margin: 0 auto;
+    padding: 0;
 }
 
 .text-container .text {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.text-container > .library-metadata-wrapper { display: none; }
+.text-container > .library-metadata-wrapper,
+.text-container .library-metadata {
+    display: none;
+}
 
 .text-container .text > div {
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  isolation: isolate;
-  border: 1px solid var(--awin-color-border);
-  border-radius: var(--awin-radius-lg);
-  background: var(--awin-color-surface);
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    isolation: isolate;
 }
 
-.text-container .text > div > .text-image,
-.text-container .text > div > :where(div:first-child) {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  border-radius: 0;
+.text-container.text-left .text > div {
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.text-container .text > div > .text-image picture,
-.text-container .text > div > div:first-child picture {
-  display: block;
-  width: 100%;
-  height: 100%;
+.text-container.text-right .text > div {
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.text-container .text > div > .text-image img,
-.text-container .text > div > div:first-child img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.3;
+.text-container.text-center .text > div {
+    justify-content: center;
+    align-items: center;
 }
 
-.text-container .text > div > :where(.text-content),
-.text-container .text > div > :where(div:last-child) {
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-  margin: 0;
-  padding: var(--awin-space-9) 0;
+.text-container .text > div > .text-content,
+.text-container .text > div > div:last-child {
+    position: relative;
+    z-index: var(--awin-z-base);
+    box-sizing: border-box;
+    margin: 0;
+    padding: var(--awin-space-16);
 }
 
-.text-container.variant-left .text > div {
-  justify-content: flex-start;
-  align-items: center;
+.text-container.text-left .text > div > .text-content,
+.text-container.text-left .text > div > div:last-child {
+    width: 60%;
+    margin: 0;
+    text-align: left;
 }
 
-.text-container:where(.variant-left) .text > div > :where(.text-content),
-.text-container:where(.variant-left) .text > div > :where(div:last-child) {
-  width: 60%;
-  text-align: left;
+.text-container.text-right .text > div > .text-content,
+.text-container.text-right .text > div > div:last-child {
+    width: 60%;
+    margin: 0 0 0 auto;
+    text-align: left;
 }
 
-.text-container.variant-right .text > div {
-  justify-content: flex-end;
-  align-items: center;
+.text-container.text-center .text > div > .text-content,
+.text-container.text-center .text > div > div:last-child {
+    width: 100%;
+    max-width: 896px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.text-container:where(.variant-right) .text > div > :where(.text-content),
-.text-container:where(.variant-right) .text > div > :where(div:last-child) {
-  width: 60%;
-  margin-left: auto;
-  text-align: left;
-}
-
-.text-container.variant-center .text > div {
-  justify-content: center;
-  align-items: center;
-}
-
-.text-container:where(.variant-center) .text > div > :where(.text-content),
-.text-container:where(.variant-center) .text > div > :where(div:last-child) {
-  width: 100%;
-  max-width: 896px;
-  margin-inline: auto;
-  text-align: center;
-}
-
+.text-container .text h1,
+.text-container .text h2,
+.text-container .text h3,
+.text-container .text h4,
+.text-container .text h5,
 .text-container .text h6 {
-  display: inline-block;
-  margin: 0 0 var(--awin-space-4);
-  padding: 6px 12px;
-  color: var(--awin-color-gold);
-  font-family: var(--awin-font-body);
-  font-size: var(--awin-text-xs);
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: rgb(212 175 55 / 10%);
-  border: 1px solid rgb(212 175 55 / 22%);
-  border-radius: var(--awin-radius-pill);
+    padding: 0;
+    color: var(--awin-color-text);
+    font-family: var(--awin-font-heading);
+}
+
+.text-container .text h1 {
+    max-width: 900px;
+    margin: 0 0 var(--awin-space-8);
+    font-size: clamp(36px, 5vw, var(--awin-text-h1));
+    font-weight: var(--awin-weight-bold);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+
+.text-container .text h2 {
+    margin: 0 0 var(--awin-space-6);
+    font-size: var(--awin-text-h2);
+    font-weight: var(--awin-weight-semibold);
+    line-height: var(--awin-line-heading);
 }
 
 .text-container .text h3 {
-  max-width: 900px;
-  margin: 0 0 var(--awin-space-5);
-  color: var(--awin-color-text);
-  font-family: var(--awin-font-heading);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-}
-
-.text-container.variant-center .text h3 {
-  margin-inline: auto;
+    max-width: 900px;
+    margin: 0 0 var(--awin-space-6);
+    font-size: var(--awin-text-h3);
+    font-weight: var(--awin-weight-semibold);
+    line-height: 1.4;
 }
 
 .text-container .text h4 {
-  margin: 0 0 var(--awin-space-4);
-  color: var(--awin-color-text);
-  font-family: var(--awin-font-heading);
-  font-size: var(--awin-text-2xl);
-  font-weight: 600;
-  line-height: 1.2;
+    margin: 0 0 var(--awin-space-4);
+    color: var(--awin-color-secondary);
+    font-size: var(--awin-text-h4);
+    font-weight: var(--awin-weight-semibold);
+    line-height: 1.4;
+}
+
+.text-container .text h5 {
+    margin: 0 0 var(--awin-space-4);
+    font-size: var(--awin-text-h5);
+    font-weight: var(--awin-weight-semibold);
+    line-height: 1.5;
+}
+
+.text-container .text h6 {
+    display: inline-block;
+    margin: 0 0 var(--awin-space-5);
+    padding: var(--awin-space-2) var(--awin-space-3);
+    color: var(--awin-color-primary);
+    font-size: var(--awin-text-h6);
+    font-weight: var(--awin-weight-semibold);
+    line-height: 1.4;
+    letter-spacing: var(--awin-letter-widest);
+    text-transform: uppercase;
+    background: rgb(242 202 80 / 10%);
+    border: 1px solid rgb(242 202 80 / 20%);
+    border-radius: var(--awin-radius-full);
+}
+
+.text-container.text-center .text h1,
+.text-container.text-center .text h2,
+.text-container.text-center .text h3 {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-container .text p {
-  max-width: 672px;
-  margin: 0 0 var(--awin-space-6);
-  color: var(--awin-color-text-muted);
-  font-family: var(--awin-font-body);
-  font-size: var(--awin-text-lg);
-  line-height: 1.7;
+    max-width: var(--awin-reading-width);
+    margin: 0 0 var(--awin-space-6);
+    padding: 0;
+    color: var(--awin-color-text-secondary);
+    font-family: var(--awin-font-body);
+    font-size: var(--awin-text-body);
+    font-weight: var(--awin-weight-regular);
+    line-height: var(--awin-line-body);
 }
 
-.text-container.variant-center .text p {
-  margin-inline: auto;
+.text-container .text p:last-child {
+    margin-bottom: 0;
+}
+
+.text-container .text p strong,
+.text-container .text li strong {
+    color: var(--awin-color-text);
+    font-weight: var(--awin-weight-bold);
+}
+
+.text-container .text p em {
+    color: var(--awin-color-secondary-fixed);
+    font-style: italic;
+}
+
+.text-container .text p mark {
+    padding: 2px 6px;
+    color: var(--awin-color-primary);
+    background: rgb(212 175 55 / 20%);
+    border-radius: var(--awin-radius-sm);
+}
+
+.text-container .text p code,
+.text-container .text li code {
+    padding: 3px 6px;
+    color: var(--awin-color-primary);
+    font-family: var(--awin-font-mono);
+    font-size: 0.9em;
+    background: var(--awin-color-surface-high);
+    border-radius: var(--awin-radius-sm);
+}
+
+.text-container.text-center .text p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-container .text blockquote {
+    margin: var(--awin-space-8) 0;
+    padding: var(--awin-space-4) var(--awin-space-6);
+    color: var(--awin-color-text);
+    font-family: var(--awin-font-heading);
+    font-size: var(--awin-text-h4);
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 3px solid var(--awin-color-primary-container);
+    background: var(--awin-color-surface-low);
+}
+
+:where(.text-container .text) a:not(.text-button) {
+    color: var(--awin-color-primary);
+    text-decoration: underline;
+    text-decoration-color: rgb(242 202 80 / 50%);
+    text-underline-offset: 4px;
+    transition:
+        color var(--awin-transition-normal),
+        text-decoration-color var(--awin-transition-normal);
+}
+
+:where(.text-container .text) a:focus-visible {
+    outline: 2px solid var(--awin-color-primary);
+    outline-offset: 4px;
+    border-radius: var(--awin-radius-sm);
+}
+
+:where(.text-container .text) a:not(.text-button):hover {
+    color: var(--awin-color-secondary);
+    text-decoration-color: var(--awin-color-secondary);
+}
+
+.text-container .text ul:where(:has(> li > a)) li a,
+.text-container .text a.text-button,
+.text-container .text ul.text-buttons li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: var(--awin-space-4) var(--awin-space-8);
+    color: var(--awin-color-on-primary);
+    font-family: var(--awin-font-body);
+    font-size: var(--awin-text-caption);
+    font-weight: var(--awin-weight-bold);
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--awin-color-primary);
+    border: 1px solid var(--awin-color-primary);
+    border-radius: var(--awin-radius-sm);
+    box-shadow: var(--awin-shadow-primary);
+    transition:
+        color var(--awin-transition-normal),
+        background var(--awin-transition-normal),
+        border-color var(--awin-transition-normal),
+        box-shadow var(--awin-transition-normal),
+        transform var(--awin-transition-normal);
+}
+
+.text-container .text ul:where(.text-buttons) li a:focus-visible,
+.text-container .text ul:where(:has(> li > a)) li a:focus-visible,
+.text-container .text a.text-button:focus-visible {
+    outline: 2px solid var(--awin-color-tertiary-fixed-dim);
+    outline-offset: 4px;
+}
+
+.text-container .text ul:where(.text-buttons) li a:hover,
+.text-container .text ul:where(:has(> li > a)) li a:hover,
+.text-container .text a.text-button:hover {
+    color: var(--awin-color-on-secondary);
+    background: var(--awin-color-secondary);
+    border-color: var(--awin-color-secondary);
+    box-shadow: var(--awin-shadow-md);
+    transform: translateY(-2px);
+}
+
+.text-container .text ul:where(:has(> li > a)) li a:active,
+.text-container .text a.text-button:active,
+.text-container .text ul.text-buttons li a:active {
+    transform: translateY(0);
 }
 
 .text-container .text ul,
-.text-container .text ul.text-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--awin-space-3);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.text-container .text ol {
+    margin: 0 0 var(--awin-space-6);
+    padding-left: var(--awin-space-6);
+    color: var(--awin-color-text-secondary);
+    font-family: var(--awin-font-body);
+    font-size: var(--awin-text-body);
+    line-height: 1.7;
 }
 
 .text-container .text ul li,
-.text-container .text .text-button-item {
-  margin: 0;
-  padding: 0;
+.text-container .text ol li {
+    margin-bottom: var(--awin-space-2);
 }
 
-.text-container .text ul li a,
-.text-container .text a.text-button {
-  text-decoration: none;
+.text-container .text ul li::marker {
+    color: var(--awin-color-primary);
 }
 
-.text-container.variant-center .text ul,
-.text-container.variant-center .text-buttons {
-  justify-content: center;
+.text-container .text ul:where(:has(> li > a)),
+.text-container .text ul.text-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--awin-space-4);
+    margin: var(--awin-space-8) 0 0;
+    padding: 0;
+    list-style: none;
 }
 
-@media (width >= 900px) {
-  .text-container { padding-inline: 48px; }
+.text-container .text ul:where(:has(> li > a)) li,
+.text-container .text ul.text-buttons li {
+    margin: 0;
+    padding: 0;
+}
+
+.text-container.text-center .text ul,
+.text-container.text-center .text .text-buttons {
+    justify-content: center;
 }
 
 @media (width <= 899px) {
-  .text-container { padding: 64px 24px; }
+    .text-container {
+        padding: var(--awin-section-spacing-tablet) var(--awin-page-gutter);
+    }
 
-  .text-container .text > div > .text-content,
-  .text-container .text > div > div:last-child {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding-block: 48px;
-  }
+    .text-container .text > div > .text-content,
+    .text-container .text > div > div:last-child {
+        width: 100%;
+        padding: var(--awin-space-12) var(--awin-space-8);
+    }
 
-  .text-container.variant-left .text > div > .text-content,
-  .text-container.variant-left .text > div > div:last-child,
-  .text-container.variant-right .text > div > .text-content,
-  .text-container.variant-right .text > div > div:last-child { width: 100%; }
-  .text-container .text h3 { font-size: clamp(2rem, 8vw, 2.75rem); }
-  .text-container .text p { font-size: var(--awin-text-base); }
+    .text-container.text-left .text > div > .text-content,
+    .text-container.text-left .text > div > div:last-child,
+    .text-container.text-right .text > div > .text-content,
+    .text-container.text-right .text > div > div:last-child {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .text-container.text-center .text > div > .text-content,
+    .text-container.text-center .text > div > div:last-child {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        text-align: center;
+    }
+
+    .text-container .text h1 {
+        font-size: clamp(36px, 6vw, var(--awin-text-h1));
+    }
+
+    .text-container .text h2 {
+        font-size: 30px;
+    }
+
+    .text-container .text h3 {
+        font-size: var(--awin-text-h3);
+    }
+
+    .text-container .text h4 {
+        font-size: var(--awin-text-h4);
+    }
+
+    .text-container .text p {
+        font-size: var(--awin-text-body);
+    }
 }
 
 @media (width <= 600px) {
-  .text-container { padding: 56px 20px; }
+    .text-container {
+        padding: var(--awin-section-spacing-mobile) var(--awin-page-gutter-mobile);
+    }
 
-  .text-container .text > div > .text-content,
-  .text-container .text > div > div:last-child { padding-block: 40px; }
-  .text-container .text h3 { font-size: 2rem; }
-  .text-container .text h4 { font-size: 1.375rem; }
-  .text-container .text p { font-size: var(--awin-text-sm); }
+    .text-container .text > div > .text-content,
+    .text-container .text > div > div:last-child {
+        padding: var(--awin-space-10) var(--awin-space-6);
+    }
+
+    .text-container .text h1 {
+        font-size: var(--awin-text-h1);
+    }
+
+    .text-container .text h2 {
+        font-size: var(--awin-text-h2);
+    }
+
+    .text-container .text h3 {
+        font-size: var(--awin-text-h3);
+    }
+
+    .text-container .text h4 {
+        font-size: var(--awin-text-h4);
+    }
+
+    .text-container .text h5 {
+        font-size: var(--awin-text-h5);
+    }
+
+    .text-container .text p {
+        font-size: var(--awin-text-body);
+    }
+
+    .text-container .text ul.text-buttons,
+    .text-container .text ul:where(:has(> li > a)) {
+        flex-direction: column;
+        gap: var(--awin-space-3);
+    }
+
+    .text-container .text ul:where(:has(> li > a)) li a,
+    .text-container .text ul.text-buttons li a,
+    .text-container .text a.text-button {
+        width: 100%;
+    }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .text-container .text a {
+        transition: none;
+    }
 
-/* Text block — centered variant */
-.text-container.text-center,
-.text-container.variant-center {
-  text-align: center;
-}
-
-.text-container.text-center .text > div,
-.text-container.variant-center .text > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 320px;
-  padding: var(--awin-space-9) var(--awin-space-4);
-  text-align: center;
-}
-
-.text-container.text-center .text-content,
-.text-container.variant-center .text-content {
-  width: 100%;
-  max-width: 896px;
-  margin-inline: auto;
-  padding: 0;
-}
-
-.text-container.text-center .text-content h3,
-.text-container.variant-center .text-content h3 {
-  margin: 0;
-  color: var(--awin-color-text);
-  font-family: var(--awin-font-heading);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-}
-
-.text-container.text-center .text-content h3:last-of-type,
-.text-container.variant-center .text-content h3:last-of-type {
-  margin-bottom: var(--awin-space-5);
-  color: var(--awin-color-gold);
-}
-
-.text-container.text-center .text-content p,
-.text-container.variant-center .text-content p {
-  max-width: 720px;
-  margin: 0 auto var(--awin-space-5);
-  color: var(--awin-color-text-muted);
-  font-family: var(--awin-font-body);
-  font-size: var(--awin-text-lg);
-  line-height: 1.75;
-}
-
-@media (width <= 600px) {
-  .text-container.text-center .text > div,
-  .text-container.variant-center .text > div {
-    min-height: 260px;
-    padding: var(--awin-space-7) var(--awin-space-3);
-  }
-
-  .text-container.text-center .text-content h3,
-  .text-container.variant-center .text-content h3 {
-    font-size: clamp(2.25rem, 10vw, 3rem);
-  }
-
-  .text-container.text-center .text-content p,
-  .text-container.variant-center .text-content p {
-    font-size: var(--awin-text-base);
-  }
+    .text-container .text a:hover {
+        transform: none;
+    }
 }

@@ -1,28 +1,29 @@
+
 .trust-bar-container {
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #1f1f1f;
-    border-top: 1px solid rgb(77 70 53 / 20%);
-    border-bottom: 1px solid rgb(77 70 53 / 20%);
+    background: var(--awin-color-surface-container);
+    border-top: var(--awin-border-width) solid var(--awin-color-outline-variant);
+    border-bottom: var(--awin-border-width) solid var(--awin-color-outline-variant);
 }
 
 .trust-bar-wrapper {
     width: 100%;
-    max-width: 1280px;
+    max-width: var(--awin-container-width);
     margin: 0 auto;
-    padding: 0 64px;
+    padding: 0 var(--awin-space-16);
     box-sizing: border-box;
 }
 
 .trust-bar {
     width: 100%;
     margin: 0;
-    padding: 32px 0;
+    padding: var(--awin-space-8) 0;
     box-sizing: border-box;
-    background: 0 0;
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: transparent;
+    font-family: var(--awin-font-body);
 }
 
 .trust-bar > div,
@@ -34,10 +35,10 @@
 }
 
 .trust-bar ul {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -49,17 +50,17 @@
     flex: 1 1 0;
     min-width: 0;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 var(--awin-space-5);
     box-sizing: border-box;
-    color: #d0c5af;
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.05em;
+    color: var(--awin-color-text-secondary);
+    font-family: var(--awin-font-body);
+    font-size: var(--awin-text-body-small);
+    font-weight: var(--awin-weight-semibold);
+    line-height: 1.4;
+    letter-spacing: var(--awin-letter-wide);
     text-align: center;
     white-space: nowrap;
-    transition: color 0.3s ease;
+    transition: color var(--awin-transition-normal);
 }
 
 .trust-bar li:not(:last-child)::after {
@@ -67,21 +68,21 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
-    color: #99907c;
+    color: var(--awin-color-text-muted);
     font-size: 20px;
-    font-weight: 400;
+    font-weight: var(--awin-weight-regular);
     line-height: 1;
+    transform: translateY(-50%);
 }
 
 .trust-bar li:hover {
-    color: #d8b76a;
+    color: var(--awin-color-primary);
 }
 
 @media (width <= 1000px) {
     .trust-bar-wrapper {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: var(--awin-space-10);
+        padding-right: var(--awin-space-10);
     }
 
     .trust-bar {
@@ -90,9 +91,9 @@
     }
 
     .trust-bar li {
-        padding-left: 12px;
-        padding-right: 12px;
-        font-size: 11px;
+        padding-left: var(--awin-space-3);
+        padding-right: var(--awin-space-3);
+        font-size: var(--awin-text-caption);
     }
 
     .trust-bar li:not(:last-child)::after {
@@ -102,13 +103,13 @@
 
 @media (width <= 800px) {
     .trust-bar-wrapper {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: var(--awin-space-8);
+        padding-right: var(--awin-space-8);
     }
 
     .trust-bar li {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: var(--awin-space-2);
+        padding-right: var(--awin-space-2);
         font-size: 10px;
         letter-spacing: 0.04em;
     }
@@ -117,25 +118,25 @@
 @media (width <= 700px) {
     .trust-bar-wrapper {
         max-width: none;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: var(--awin-page-gutter-mobile);
+        padding-right: var(--awin-page-gutter-mobile);
     }
 
     .trust-bar {
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding-top: var(--awin-space-6);
+        padding-bottom: var(--awin-space-6);
     }
 
     .trust-bar ul {
         flex-wrap: wrap;
         justify-content: center;
-        row-gap: 20px;
+        row-gap: var(--awin-space-5);
     }
 
     .trust-bar li {
         flex: 1 1 50%;
         min-width: 50%;
-        padding: 5px 10px;
+        padding: var(--awin-space-1) var(--awin-space-3);
         font-size: 10px;
         line-height: 1.4;
         white-space: normal;
@@ -153,20 +154,26 @@
     }
 
     .trust-bar {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: var(--awin-space-5);
+        padding-bottom: var(--awin-space-5);
     }
 
     .trust-bar ul {
         flex-direction: column;
-        gap: 12px;
+        gap: var(--awin-space-3);
     }
 
     .trust-bar li {
         flex: none;
         min-width: 0;
         width: 100%;
-        padding: 4px 5px;
+        padding: var(--awin-space-1) 5px;
         font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trust-bar li {
+        transition: none;
     }
 }
