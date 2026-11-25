@@ -99,14 +99,14 @@ main > .homepage-teaser-container > .homepage-teaser-wrapper {
     color: #f2ca50;
 }
 
-.homepage-teaser-button-item:first-child .homepage-teaser-button:hover {
-    background: rgb(242 202 80 / 10%);
-    color: #f2ca50;
-}
-
 .homepage-teaser-button-item:nth-child(2) .homepage-teaser-button {
     background: #f2ca50;
     color: #111;
+}
+
+.homepage-teaser-button-item:first-child .homepage-teaser-button:hover {
+    background: rgb(242 202 80 / 10%);
+    color: #f2ca50;
 }
 
 .homepage-teaser-button-item:nth-child(2) .homepage-teaser-button:hover {

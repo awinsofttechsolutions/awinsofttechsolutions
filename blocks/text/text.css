@@ -14,7 +14,14 @@
   max-width: var(--awin-container);
   margin: 0 auto;
 }
-.text-container .text { position: relative; width: 100%; margin: 0; padding: 0; }
+
+.text-container .text {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .text-container > .library-metadata-wrapper { display: none; }
 
 .text-container .text > div {
@@ -31,7 +38,7 @@
 }
 
 .text-container .text > div > .text-image,
-.text-container .text > div > div:first-child {
+.text-container .text > div > :where(div:first-child) {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -62,33 +69,45 @@
   opacity: 0.3;
 }
 
-.text-container .text > div > .text-content,
-.text-container .text > div > div:last-child {
+.text-container .text > div > :where(.text-content),
+.text-container .text > div > :where(div:last-child) {
   position: relative;
   z-index: 1;
   box-sizing: border-box;
   margin: 0;
   padding: var(--awin-space-9) 0;
 }
-.text-container.variant-left .text > div { justify-content: flex-start; align-items: center; }
 
-.text-container.variant-left .text > div > .text-content,
-.text-container.variant-left .text > div > div:last-child {
+.text-container.variant-left .text > div {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-container:where(.variant-left) .text > div > :where(.text-content),
+.text-container:where(.variant-left) .text > div > :where(div:last-child) {
   width: 60%;
   text-align: left;
 }
-.text-container.variant-right .text > div { justify-content: flex-end; align-items: center; }
 
-.text-container.variant-right .text > div > .text-content,
-.text-container.variant-right .text > div > div:last-child {
+.text-container.variant-right .text > div {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.text-container:where(.variant-right) .text > div > :where(.text-content),
+.text-container:where(.variant-right) .text > div > :where(div:last-child) {
   width: 60%;
   margin-left: auto;
   text-align: left;
 }
-.text-container.variant-center .text > div { justify-content: center; align-items: center; }
 
-.text-container.variant-center .text > div > .text-content,
-.text-container.variant-center .text > div > div:last-child {
+.text-container.variant-center .text > div {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container:where(.variant-center) .text > div > :where(.text-content),
+.text-container:where(.variant-center) .text > div > :where(div:last-child) {
   width: 100%;
   max-width: 896px;
   margin-inline: auto;
@@ -121,7 +140,10 @@
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
-.text-container.variant-center .text h3 { margin-inline: auto; }
+
+.text-container.variant-center .text h3 {
+  margin-inline: auto;
+}
 
 .text-container .text h4 {
   margin: 0 0 var(--awin-space-4);
@@ -140,7 +162,10 @@
   font-size: var(--awin-text-lg);
   line-height: 1.7;
 }
-.text-container.variant-center .text p { margin-inline: auto; }
+
+.text-container.variant-center .text p {
+  margin-inline: auto;
+}
 
 .text-container .text ul,
 .text-container .text ul.text-buttons {
@@ -153,7 +178,10 @@
 }
 
 .text-container .text ul li,
-.text-container .text .text-button-item { margin: 0; padding: 0; }
+.text-container .text .text-button-item {
+  margin: 0;
+  padding: 0;
+}
 
 .text-container .text ul li a,
 .text-container .text a.text-button {
@@ -161,7 +189,9 @@
 }
 
 .text-container.variant-center .text ul,
-.text-container.variant-center .text-buttons { justify-content: center; }
+.text-container.variant-center .text-buttons {
+  justify-content: center;
+}
 
 @media (width >= 900px) {
   .text-container { padding-inline: 48px; }

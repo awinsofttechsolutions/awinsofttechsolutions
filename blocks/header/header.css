@@ -46,13 +46,6 @@
     align-items: center;
 }
 
-.header .logo > div,
-.header .logo > div > div {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
 .header .logo picture {
     height: 100%;
     display: flex;
@@ -81,7 +74,34 @@
     align-items: center;
 }
 
-.header .navigation > div,
+.header .navigation > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .get-in-touch > div {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo > div > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .get-in-touch > div > div {
+    display: flex;
+    align-items: center;
+}
+
 .header .navigation > div > div {
     height: 100%;
     display: flex;
@@ -137,12 +157,6 @@
 }
 
 .header .get-in-touch {
-    display: flex;
-    align-items: center;
-}
-
-.header .get-in-touch > div,
-.header .get-in-touch > div > div {
     display: flex;
     align-items: center;
 }

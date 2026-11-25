@@ -175,20 +175,8 @@ main > .teaser-container > .teaser-wrapper {
   color: #111 !important;
 }
 
-.teaser-button-item-1 .teaser-button:hover {
-  background: #ff8b00;
-  border-color: #ff8b00;
-  color: #111 !important;
-}
-
 .teaser-button-item-2 .teaser-button {
   background: transparent;
-  border-color: #ff8b00;
-  color: #ff8b00 !important;
-}
-
-.teaser-button-item-2 .teaser-button:hover {
-  background: rgb(255 139 0 / 10%);
   border-color: #ff8b00;
   color: #ff8b00 !important;
 }
@@ -200,6 +188,18 @@ main > .teaser-container > .teaser-wrapper {
   background: transparent;
   border-color: #f2ca50;
   color: #f2ca50 !important;
+}
+
+.teaser-button-item-1 .teaser-button:hover {
+  background: #ff8b00;
+  border-color: #ff8b00;
+  color: #111 !important;
+}
+
+.teaser-button-item-2 .teaser-button:hover {
+  background: rgb(255 139 0 / 10%);
+  border-color: #ff8b00;
+  color: #ff8b00 !important;
 }
 
 .teaser-button-item-3 .teaser-button:hover,
@@ -225,6 +225,11 @@ main > .teaser-container > .teaser-wrapper {
 
 .teaser-button:hover .teaser-button-arrow {
   transform: translateX(4px);
+}
+
+.teaser.teaser-no-image > div {
+  display: block;
+  grid-template-columns: minmax(0,1fr);
 }
 
 /* Desktop: Text left, image right */
@@ -263,12 +268,6 @@ main > .teaser-container > .teaser-wrapper {
   grid-row: 1;
 }
 
-/* Text-only teaser: single-column layout */
-.teaser.teaser-no-image > div {
-  display: block;
-  grid-template-columns: minmax(0,1fr);
-}
-
 .teaser.teaser-no-image .teaser-content {
   width: 100%;
   grid-column: 1;
@@ -277,11 +276,6 @@ main > .teaser-container > .teaser-wrapper {
 
 .teaser.teaser-no-image .teaser-image {
   display: none;
-}
-
-.text-left.image-right .teaser.teaser-no-image > div,
-.text-right.image-left .teaser.teaser-no-image > div {
-  grid-template-columns: minmax(0,1fr);
 }
 
 .text-center.image-center {
@@ -436,6 +430,11 @@ main > .teaser-container > .teaser-wrapper {
   max-width: 950px;
 }
 
+.text-left.image-right .teaser.teaser-no-image > div,
+.text-right.image-left .teaser.teaser-no-image > div {
+  grid-template-columns: minmax(0,1fr);
+}
+
 /* Tablet */
 @media (width <= 1024px) {
   main > .teaser-container > .teaser-wrapper {
@@ -505,13 +504,13 @@ main > .teaser-container > .teaser-wrapper {
     order: 1;
   }
 
+  .teaser-image {
+    height: 340px;
+  }
+
   .text-left.image-right .teaser-image,
   .text-right.image-left .teaser-image {
     order: 2;
-  }
-
-  .teaser-image {
-    height: 340px;
   }
 
   .teaser h3 {

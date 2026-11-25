@@ -191,12 +191,6 @@ main > .section.notice-container .notice ul li:nth-child(2) a:hover {
     border-color: var(--primary-color);
 }
 
-main > .section.page-maintenance.notice-container {
-}
-
-main > .section.site-maintenance.notice-container {
-}
-
 @media (width >= 900px) {
     main > .section.notice-container {
         padding: var(--section-gap) var(--margin-desktop) var(--section-gap) var(--margin-desktop);

@@ -229,14 +229,14 @@
     padding: 0;
     overflow: hidden;
     border: 0;
-    border-radius: 12px;
-    background: var(--job-accent-color, #7360f2);
-    box-shadow: none;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .recruitments .job-role-icon .icon {
-    width: 32px;
-    height: 32px;
+    width: 56px !important;
+    height: 56px !important;
 }
 
 .recruitments .job-heading-content {
@@ -576,6 +576,16 @@ body.job-modal-open {
     overflow: hidden !important;
 }
 
+.job-modal-backdrop {
+    opacity: 0;
+    transition: opacity 280ms ease;
+}
+
+.job-modal-backdrop,
+.job-modal-backdrop * {
+    box-sizing: border-box !important;
+}
+
 body > .job-modal-backdrop {
     position: fixed !important;
     inset: 0 !important;
@@ -592,11 +602,6 @@ body > .job-modal-backdrop {
     overflow: hidden !important;
     background: rgb(0 0 0 / 80%) !important;
     backdrop-filter: blur(8px);
-    box-sizing: border-box !important;
-}
-
-.job-modal-backdrop,
-.job-modal-backdrop * {
     box-sizing: border-box !important;
 }
 
@@ -619,6 +624,9 @@ body > .job-modal-backdrop {
     background: #1b1b1b !important;
     color: #e2e2e2 !important;
     box-shadow: 0 24px 80px rgb(0 0 0 / 50%) !important;
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+    transition: opacity 280ms ease, transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .job-modal-backdrop .job-modal-header {
@@ -884,19 +892,8 @@ body > .job-modal-backdrop {
     }
 }
 
-.job-modal-backdrop {
-    opacity: 0;
-    transition: opacity 280ms ease;
-}
-
 .job-modal-backdrop.is-visible {
     opacity: 1;
-}
-
-.job-modal-backdrop .job-modal {
-    opacity: 0;
-    transform: translateY(24px) scale(0.97);
-    transition: opacity 280ms ease, transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .job-modal-backdrop.is-visible .job-modal {
@@ -912,17 +909,6 @@ body > .job-modal-backdrop {
 .job-modal-backdrop.is-closing .job-modal {
     opacity: 0;
     transform: translateY(16px) scale(0.97);
-}
-
-.recruitments .job-role-icon {
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-}
-
-.recruitments .job-role-icon .icon {
-    width: 56px !important;
-    height: 56px !important;
 }
 
 .recruitments .job-role-icon .icon img {
