@@ -80,12 +80,7 @@
   align-items: center;
 }
 
-.header .logo > div {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
+.header .logo > div,
 .header .logo > div > div {
   height: 100%;
   display: flex;
@@ -133,6 +128,50 @@
     border-color var(--awin-transition-normal);
 }
 
+/* Get in Touch button */
+.header .get-in-touch a,
+.header .get-in-touch p {
+  width: auto;
+  min-height: 50px;
+  margin: 0;
+  padding: 0 var(--awin-space-3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--awin-color-primary);
+  color: var(--awin-color-on-primary);
+  border: var(--awin-border-width) solid var(--awin-color-primary);
+  border-radius: var(--awin-radius-md);
+  font-family: var(--awin-font-body);
+  font-size: var(--awin-text-body-small);
+  font-weight: var(--awin-weight-semibold);
+  letter-spacing: var(--awin-letter-wide);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    opacity var(--awin-transition-normal),
+    transform var(--awin-transition-normal),
+    background var(--awin-transition-normal),
+    border-color var(--awin-transition-normal);
+}
+
+.header .get-in-touch a:hover,
+.header .get-in-touch p:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  background: var(--awin-color-primary-dim);
+  border-color: var(--awin-color-primary-dim);
+  color: var(--awin-color-on-primary);
+}
+
+.header .get-in-touch a:focus-visible {
+  outline: 2px solid var(--awin-color-primary);
+  outline-offset: 4px;
+}
+
 .header .navigation a:hover {
   color: var(--awin-color-primary);
 }
@@ -155,34 +194,6 @@
 .header .get-in-touch {
   display: flex;
   align-items: center;
-}
-
-.header .get-in-touch p {
-  margin: 0;
-  min-height: 50px;
-  padding: 0 var(--awin-space-6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--awin-color-primary);
-  color: var(--awin-color-on-primary);
-  border: var(--awin-border-width) solid var(--awin-color-primary);
-  border-radius: var(--awin-radius-md);
-  font-family: var(--awin-font-body);
-  font-size: var(--awin-text-body-small);
-  font-weight: var(--awin-weight-semibold);
-  letter-spacing: var(--awin-letter-wide);
-  white-space: nowrap;
-  cursor: pointer;
-  transition:
-    opacity var(--awin-transition-normal),
-    transform var(--awin-transition-normal),
-    background var(--awin-transition-normal);
-}
-
-.header .get-in-touch p:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
 }
 
 .header .nav-hamburger {
@@ -248,9 +259,9 @@
     font-size: var(--awin-text-caption);
   }
 
+  .header .get-in-touch a,
   .header .get-in-touch p {
     min-height: 44px;
-    padding: 0 var(--awin-space-4);
     font-size: var(--awin-text-caption);
   }
 }
@@ -303,9 +314,9 @@
     height: auto;
   }
 
+  .header .get-in-touch a,
   .header .get-in-touch p {
     min-height: 40px;
-    padding: 0 var(--awin-space-4);
     font-size: var(--awin-text-caption);
   }
 
@@ -374,9 +385,9 @@
     max-width: 165px;
   }
 
+  .header .get-in-touch a,
   .header .get-in-touch p {
     min-height: 36px;
-    padding: 0 var(--awin-space-3);
     font-size: var(--awin-text-caption);
   }
 
@@ -396,6 +407,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .header .navigation a,
+  .header .get-in-touch a,
   .header .get-in-touch p {
     transition: none;
   }
