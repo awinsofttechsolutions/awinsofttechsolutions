@@ -3,6 +3,8 @@
  * Supports image + text, text-only and CTA teaser layouts.
  * @param {Element} block The teaser block element.
  */
+import decorateInlineColors from '../../scripts/utilities/inline-colors.js';
+
 export default function decorate(block) {
   const rows = [...block.children];
   if (!rows.length) return;
@@ -43,6 +45,9 @@ export default function decorate(block) {
       });
     }
   }
+
+    decorateInlineColors(block);
+  
   const section = block.closest('.section');
   if (section) {
     const variants = [
