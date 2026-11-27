@@ -15,14 +15,12 @@ function updateCardIcons(block) {
     .toLowerCase()
     .includes('contact-us');
 
-  const iconFolder = isContactUs ? 'contact-us' : 'about-us';
-
   block.querySelectorAll('img[data-icon-name]').forEach((img) => {
     const { iconName } = img.dataset;
 
     if (!iconName) return;
 
-    img.src = `/media/icons/${iconFolder}/${iconName}.png`;
+    img.src = `/media/icons/${iconName}.png`;
     img.removeAttribute('srcset');
   });
 }

@@ -325,3 +325,86 @@
     transition: none !important;
   }
 }
+
+
+.cards-container .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.cards-container .cards-card-body > h3:first-child {
+  margin-top: 0;
+}
+
+.cards-container .cards-card-body > p:first-of-type:not(:has(.icon)) {
+  margin-top: 0;
+}
+
+.cards-container.three-columns .cards-card-body > h3:first-child {
+  margin-bottom: var(--awin-space-3);
+}
+
+.cards-container.three-columns .cards-card-body > p:first-of-type:not(:has(.icon)) {
+  margin-bottom: 0;
+  color: var(--awin-color-text-secondary);
+  font-family: var(--awin-font-body);
+  font-size: var(--awin-text-body);
+  line-height: var(--awin-line-body);
+}
+
+
+.cards-container.three-columns .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.cards-container.three-columns .cards-card-body > p:has(.icon) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  margin: 0 0 var(--awin-space-6);
+  padding: 0;
+  border-radius: var(--awin-radius-md);
+  background: var(--awin-color-surface-container);
+}
+
+.cards-container.three-columns .cards-card-body > p:has(.icon) img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.cards-container.three-columns .cards-card-body > h3 {
+  margin: 0 0 var(--awin-space-3);
+  color: var(--awin-color-text);
+  font-family: var(--awin-font-heading);
+  font-size: var(--awin-text-h4);
+  font-weight: var(--awin-weight-semibold);
+  line-height: var(--awin-line-heading);
+}
+
+.cards-container.three-columns .cards-card-body > p:not(:has(.icon)) {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: var(--awin-color-text-secondary);
+  font-family: var(--awin-font-body);
+  font-size: var(--awin-text-body);
+  font-weight: var(--awin-weight-regular);
+  line-height: var(--awin-line-body);
+  background: transparent;
+}
+
+.cards-container.three-columns .cards-card-body > ul {
+  margin-top: auto;
+  padding-top: var(--awin-space-6);
+}
