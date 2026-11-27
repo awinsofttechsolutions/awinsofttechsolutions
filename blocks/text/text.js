@@ -1,3 +1,5 @@
+import decorateInlineColors from '../../scripts/utilities/inline-colors.js';
+
 export default function decorate(block) {
   const row = block.querySelector(':scope > div');
 
@@ -37,6 +39,8 @@ export default function decorate(block) {
       }
     });
   }
+
+  decorateInlineColors(block);
 
   const section = block.closest('.section');
 

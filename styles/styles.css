@@ -251,6 +251,18 @@ small {
     background: var(--awin-color-primary);
 }
 
+.text-primary {
+  color: var(--awin-color-primary) !important;
+}
+
+.text-secondary {
+  color: var(--awin-color-secondary) !important;
+}
+
+.text-tertiary {
+  color: var(--awin-color-tertiary) !important;
+}
+
 @media (width <= 899px) {
     :root {
         --awin-text-display: 40px;

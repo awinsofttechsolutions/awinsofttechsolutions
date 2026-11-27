@@ -11,10 +11,6 @@ function isCardImage(element) {
 }
 
 function updateCardIcons(block) {
-  const isContactUs = window.location.pathname
-    .toLowerCase()
-    .includes('contact-us');
-
   block.querySelectorAll('img[data-icon-name]').forEach((img) => {
     const { iconName } = img.dataset;
 
