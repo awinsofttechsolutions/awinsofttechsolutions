@@ -1,17 +1,68 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
+function isCardImage(element) {
+  if (element.querySelector('picture')) return true;
+
+  const images = [...element.querySelectorAll('img')];
+
+  return images.some((img) => (
+    !img.closest('.icon, .material-symbols-outlined, [data-icon-name]')
+  ));
+}
+
+function updateCardIcons(block) {
+  const isContactUs = window.location.pathname
+    .toLowerCase()
+    .includes('contact-us');
+
+  const iconFolder = isContactUs ? 'contact-us' : 'about-us';
+
+  block.querySelectorAll('img[data-icon-name]').forEach((img) => {
+    const { iconName } = img.dataset;
+
+    if (!iconName) return;
+
+    img.src = `/media/icons/${iconFolder}/${iconName}.png`;
+    img.removeAttribute('srcset');
+  });
+}
+
+function optimizeCardImages(block) {
+  block.querySelectorAll('.cards-card-image picture > img').forEach((img) => {
+    const picture = img.closest('picture');
+
+    if (!picture) return;
+
+    picture.replaceWith(
+      createOptimizedPicture(
+        img.src,
+        img.alt,
+        false,
+        [{ width: '750' }],
+      ),
+    );
+  });
+}
+
 export default function decorate(block) {
-  /* change to ul, li */
   const ul = document.createElement('ul');
+
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
+
+    [...row.children].forEach((cell) => {
+      cell.className = isCardImage(cell)
+        ? 'cards-card-image'
+        : 'cards-card-body';
+
+      li.append(cell);
     });
+
     ul.append(li);
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+
   block.replaceChildren(ul);
+
+  updateCardIcons(block);
+  optimizeCardImages(block);
 }
